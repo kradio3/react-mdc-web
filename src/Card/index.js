@@ -4,3 +4,4 @@ export { default } from './Card';
 export { CardHeader } from './CardHeader';
 export { CardTitle } from './CardTitle';
 export { CardSubTitle } from './CardSubtitle';
+export { CardText } from './CardText';
