@@ -5,3 +5,4 @@ export { CardHeader } from './CardHeader';
 export { CardTitle } from './CardTitle';
 export { CardSubTitle } from './CardSubtitle';
 export { CardText } from './CardText';
+export { CardActions } from './CardActions';
