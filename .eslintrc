@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "react/prop-types": [2, { "ignore": ["children"] }],
+    "import/no-extraneous-dependencies": 0,
+    "react/require-default-props": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+  }
+}
