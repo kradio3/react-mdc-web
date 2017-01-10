@@ -19,21 +19,24 @@ const Button = ({
   dense,
   primary,
   raised,
-  ...otherProps,
-}) => (
-  <button
-    className={classnames(
-      'mdc-button', {
-        'mdc-button--accent': accent,
-        'mdc-button--compact': compact,
-        'mdc-button--dense': dense,
-        'mdc-button--primary': primary,
-        'mdc-button--raised': raised,
-      }, className)}
-    {...otherProps}
-  >
-    {children}
-  </button>
-);
+  ...otherProps
+}) => {
+  const classes = classnames(
+    'mdc-button', {
+      'mdc-button--accent': accent,
+      'mdc-button--compact': compact,
+      'mdc-button--dense': dense,
+      'mdc-button--primary': primary,
+      'mdc-button--raised': raised,
+    }, className);
+  return (
+    <button
+      className={classes}
+      {...otherProps}
+    >
+      {children}
+    </button>
+  );
+};
 Button.propTypes = propTypes;
 export default Button;
