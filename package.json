@@ -1,6 +1,6 @@
 {
   "name": "react-mdc-web",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "React web components for Material Design",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
@@ -11,7 +11,11 @@
     "react",
     "mdc",
     "web",
-    "ui"
+    "ui",
+    "material",
+    "design",
+    "components",
+    "web"
   ],
   "devDependencies": {
     "babel-cli": "^6.18.0",
