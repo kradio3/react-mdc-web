@@ -7,8 +7,8 @@ class Input extends React.PureComponent {
 
   static propTypes = {
     disabled: PropTypes.bool,
-    onFocus: PropTypes.func,
     onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
   }
 
   constructor(props) {
@@ -23,12 +23,14 @@ class Input extends React.PureComponent {
   }
 
   render() {
+    const { disabled, ...otherProps } = this.props;
     return (
       <input
         className={classnames(Input.ROOT)}
-        disabled={this.props.disabled}
+        disabled={disabled}
         type="text"
         ref={this.registerListeners}
+        {...otherProps}
       />
     );
   }

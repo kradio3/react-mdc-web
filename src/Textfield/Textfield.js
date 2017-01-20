@@ -6,8 +6,9 @@ import Input from './Input';
 class Textfield extends React.PureComponent {
 
   static propTypes = {
-    floatingLabel: PropTypes.string,
     disabled: PropTypes.bool,
+    floatingLabel: PropTypes.string,
+    value: PropTypes.string,
   }
 
   constructor(props) {
@@ -25,10 +26,9 @@ class Textfield extends React.PureComponent {
     this.setState({ focus: false });
   }
 
-
   render() {
     const { focus } = this.state;
-    const { floatingLabel, disabled } = this.props;
+    const { floatingLabel, disabled, value, ...otherProps } = this.props;
     return (
       <Label
         disabled={disabled}
@@ -38,8 +38,15 @@ class Textfield extends React.PureComponent {
           disabled={disabled}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
+          value={value}
+          {...otherProps}
         />
-        <Span focused={focus}>{floatingLabel}</Span>
+        <Span
+          focused={focus}
+          value={value}
+        >
+          {floatingLabel}
+        </Span>
       </Label>
     );
   }
