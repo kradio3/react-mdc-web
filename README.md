@@ -1,4 +1,5 @@
-[![npm version](https://badge.fury.io/js/react-mdc-web.svg)](https://badge.fury.io/js/react-mdc-web)
+[![npm version](https://img.shields.io/npm/v/react-mdc-web.svg?style=flat-square)](https://www.npmjs.com/package/react-mdc-web)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kradio3/react-mdc-web/master/LICENSE)
 # Material components for React
 
 React components based on styles from [Material Design Components Web project][mdc-web]. Components are written in React.js. Doesn not use MDC JS sources.
