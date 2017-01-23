@@ -22,22 +22,24 @@ class Textfield extends React.PureComponent {
     this.setState({ focus: true });
   }
 
-  onBlur() {
-    this.setState({ focus: false });
+  onBlur(event) {
+    const invalid = !event.target.checkValidity();
+    this.setState({ focus: false, invalid });
   }
 
   render() {
-    const { focus } = this.state;
+    const { focus, invalid } = this.state;
     const { floatingLabel, disabled, value, ...otherProps } = this.props;
     return (
       <Label
         disabled={disabled}
         focused={focus}
+        invalid={invalid}
       >
         <Input
           disabled={disabled}
-          onFocus={this.onFocus}
           onBlur={this.onBlur}
+          onFocus={this.onFocus}
           value={value}
           {...otherProps}
         />
