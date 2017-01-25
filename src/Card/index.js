@@ -1,8 +1,8 @@
 import '@material/card/dist/mdc.card.min.css';
 
-export { default } from './Card';
-export { CardHeader } from './CardHeader';
-export { CardTitle } from './CardTitle';
-export { CardSubTitle } from './CardSubtitle';
-export { CardText } from './CardText';
-export { CardActions } from './CardActions';
+export { default as Card} from './Card';
+export { default as CardHeader } from './CardHeader';
+export { default as CardTitle } from './CardTitle';
+export { default as CardSubTitle } from './CardSubtitle';
+export { default as CardText } from './CardText';
+export { default as CardActions } from './CardActions';

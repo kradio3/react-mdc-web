@@ -10,7 +10,30 @@ npm i --save react-mdc-web
 
 ## Usage
 ```jsx
-import Card from 'react-mdc-web/lib/Card'
+import React, { Component } from 'react'
+import {Card, CardHeader, CardTitle, CardText, CardActions} from 'react-mdc-web/lib/Card';
+import {Button} from 'react-mdc-web/lib/Button';
+
+class MyComponent extends Component {
+  render() {
+    return (
+        <Card>
+          <CardHeader>
+            <CardTitle>
+              Title goes here
+            </CardTitle>
+          </CardHeader>
+          <CardText> 
+            Lorem ipsum dolor sit amet, sint adipiscing ius eu, qui eu aliquid minimum imperdiet. In ridens impedit vis, an habeo accumsan dissentiunt eam, id cum elitr putant voluptatibus. Congue admodum mentitum per no, harum inimicus contentiones pri an. Sea eius modus adipiscing ei, his erat erroribus intellegebat cu.
+          </CardText>
+          <CardActions>
+            <Button compact>Save</Button>
+            <Button compact accent>Remove</Button>
+          </CardActions>
+        </Card>
+    );
+  }
+}
 
 ```
 
