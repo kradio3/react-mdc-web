@@ -1,6 +1,5 @@
-[![npm version](https://img.shields.io/npm/v/react-mdc-web.svg?style=flat-square)](https://www.npmjs.com/package/react-mdc-web)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kradio3/react-mdc-web/master/LICENSE)
 # Material components for React
+[![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![License][license-image]][license-url] 
 
 React components based on styles from [Material Design Components Web project][mdc-web]. Components are written in React.js. Doesn not use MDC JS sources.
 
@@ -16,5 +15,12 @@ import Card from 'react-mdc-web/lib/Card'
 ```
 
 ## License
-MIT
+MIT, see [LICENSE](/LICENSE) for details
+[status-image]: https://img.shields.io/badge/status-maintained-brightgreen.svg
+[status-url]: https://github.com/kradio3/react-mdc-web
 
+[npm-image]: https://img.shields.io/npm/v/react-mdc-web.svg
+[npm-url]: https://www.npmjs.com/package/react-mdc-web
+
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-url]: https://raw.githubusercontent.com/kradio3/react-mdc-web/master/LICENSE
