@@ -9,7 +9,7 @@ npm i --save react-mdc-web
 ```
 
 ## Usage
-```jsx
+```js
 import React, { Component } from 'react'
 import {Card, CardHeader, CardTitle, CardText, CardActions, Button} from 'react-mdc-web/lib';
 
