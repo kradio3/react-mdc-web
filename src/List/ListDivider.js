@@ -11,6 +11,7 @@ const ListDivider = ({ className, inset }) => (
     className={classnames('mdc-list-divider', {
       'mdc-list-divider--inset': inset,
     }, className)}
+    role={'separator'}
   />
   );
 ListDivider.propTypes = propTypes;

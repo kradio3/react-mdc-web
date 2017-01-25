@@ -1,7 +1,7 @@
 # Material components for React
 [![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![License][license-image]][license-url] 
 
-React components based on styles from [Material Design Components Web project][mdc-web]. Components are written in React.js. Doesn not use MDC JS sources.
+React components based on styles from [Material Design Components Web project][mdc-web]. Components are written in React.js. Doesn't use MDC JS sources.
 
 ## Installation
 ```sh
