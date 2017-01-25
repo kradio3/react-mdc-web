@@ -11,8 +11,7 @@ npm i --save react-mdc-web
 ## Usage
 ```jsx
 import React, { Component } from 'react'
-import {Card, CardHeader, CardTitle, CardText, CardActions} from 'react-mdc-web/lib/Card';
-import {Button} from 'react-mdc-web/lib/Button';
+import {Card, CardHeader, CardTitle, CardText, CardActions, Button} from 'react-mdc-web/lib';
 
 class MyComponent extends Component {
   render() {
