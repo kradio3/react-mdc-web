@@ -53,6 +53,7 @@
     "test": "echo \"TODO tests\"",
     "clean": "rm -rf lib",
     "compile": "babel src --ignore __tests__ --out-dir lib",
+    "watch": "npm run compile -- --watch",
     "release": "npm run lint npm run clean && npm run compile"
   },
   "dependencies": {
