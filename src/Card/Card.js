@@ -6,9 +6,10 @@ const propTypes = {
   children: PropTypes.node,
 };
 
-const Card = ({ className, children }) => (
+const Card = ({ className, children, ...otherProps }) => (
   <div
     className={classnames('mdc-card', className)}
+    {...otherProps}
   >
     {children}
   </div>
