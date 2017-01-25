@@ -4,3 +4,4 @@ export { default as Elevation } from './Elevation';
 export { default as Fab } from './Fab';
 export { List, ListItem, ListDivider } from './List';
 export { default as Textfield } from './Textfield';
+export { default as Checkbox } from './Checkbox';
