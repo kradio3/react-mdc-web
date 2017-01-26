@@ -6,3 +6,4 @@ export { List, ListItem, ListDivider } from './List';
 export { default as Textfield } from './Textfield';
 export { default as Checkbox } from './Checkbox';
 export { default as FormField } from './FormField';
+export { default as IconToggle } from './IconToggle';
