@@ -1,0 +1,20 @@
+```jsx
+<Drawer>
+  <Spacer>Logo</Spacer>
+  <Navigation>
+    <NavigationItem
+      selected
+      href="#"
+      iconName="inbox"
+    >
+      Inbox
+    </NavigationItem>
+    <NavigationItem
+      href="#"
+      iconName="star"
+    >
+      Star
+    </NavigationItem>
+  </Navigation>
+</Drawer>
+```
