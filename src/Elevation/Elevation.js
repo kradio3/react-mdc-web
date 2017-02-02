@@ -9,11 +9,12 @@ const propTypes = {
 };
 
 
-const Elevation = ({ className, children, z, transition }) => (
+const Elevation = ({ className, children, z, transition, ...otherProps }) => (
   <div
     className={classnames(`mdc-elevation--z${z}`, className, {
       'mdc-elevation-transition': transition,
     })}
+    {...otherProps}
   >
     {children}
   </div>

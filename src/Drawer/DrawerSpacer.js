@@ -6,7 +6,7 @@ const propTypes = {
   children: PropTypes.node,
 };
 
-const Spacer = ({ className, children, ...otherProps }) => (
+const DrawerSpacer = ({ className, children, ...otherProps }) => (
   <div
     className={classnames('mdc-permanent-drawer__toolbar-spacer', className)}
     {...otherProps}
@@ -14,5 +14,5 @@ const Spacer = ({ className, children, ...otherProps }) => (
     {children}
   </div>
   );
-Spacer.propTypes = propTypes;
-export default Spacer;
+DrawerSpacer.propTypes = propTypes;
+export default DrawerSpacer;

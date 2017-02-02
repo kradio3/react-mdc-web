@@ -1,23 +1,25 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
-import Icon from '../Icon'
+import Icon from '../Icon';
 
 const propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   iconName: PropTypes.string,
   selected: PropTypes.bool,
+  temporary: PropTypes.bool,
 };
 
-const NavigationItem = ({ 
+const NavigationItem = ({
   className,
   children,
   iconName,
   selected,
-  ...otherProps,
+  temporary,
+  ...otherProps
 }) => {
   const icon = iconName && (
-    <Icon 
+    <Icon
       aria-hidden="true"
       className="mdc-list-item__start-detail"
       name={iconName}
@@ -26,7 +28,8 @@ const NavigationItem = ({
   return (
     <a
       className={classnames('mdc-list-item', {
-        'mdc-permanent-drawer--selected': selected,
+        'mdc-permanent-drawer--selected': selected && !temporary,
+        'mdc-temporary-drawer--selected': selected && temporary,
       }, className)}
       {...otherProps}
     >
@@ -34,6 +37,6 @@ const NavigationItem = ({
       {children}
     </a>
   );
-}
+};
 NavigationItem.propTypes = propTypes;
 export default NavigationItem;
