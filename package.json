@@ -56,8 +56,7 @@
     "clean": "rm -rf lib",
     "compile": "babel src --ignore __tests__ --out-dir lib",
     "watch": "npm run compile -- --watch",
-    "build-umd": "NODE_ENV=production webpack src/index.js out/react-mdc-web.js --output-library ReactMdcWeb --output-library-target umd",
-    "build-umd-min": "NODE_ENV=production webpack src/index.js out/react-mdc-web.min.js --output-library ReactMdcWeb --output-library-target umd --optimize-minimize",
+    "build-umd": "NODE_ENV=production webpack",
     "release": "npm run lint npm run clean && npm run compile"
   },
   "dependencies": {
