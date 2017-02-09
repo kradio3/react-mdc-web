@@ -7,7 +7,7 @@ const propTypes = {
 };
 
 const CardActions = ({ className, children }) => {
-  const actions = children && children.map((action, index) => {
+  const actions = React.Children.map(children, (action, index) => {
     const actionClasses = action.props.className;
     const classes = classnames(actionClasses, 'mdc-card__action');
     return React.cloneElement(action, { key: index, className: classes });
