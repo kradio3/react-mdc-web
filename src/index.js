@@ -11,3 +11,4 @@ export { default as FormField } from './FormField';
 export { default as IconToggle } from './IconToggle';
 export { default as Icon } from './Icon';
 export { Drawer, DrawerSpacer, Navigation, NavigationItem, DrawerHeader, DrawerHeaderContent, DrawerContent } from './Drawer';
+export { Grid, Cell } from "./LayoutGrid"
