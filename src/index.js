@@ -10,4 +10,4 @@ export { default as Checkbox } from './Checkbox';
 export { default as FormField } from './FormField';
 export { default as IconToggle } from './IconToggle';
 export { default as Icon } from './Icon';
-export { Drawer, DrawerSpacer, Navigation, NavigationItem, DrawerHeader, DrawerHeaderContent, DrawerContent } from './Drawer';
+export { Drawer, DrawerSpacer, Navigation, DrawerHeader, DrawerHeaderContent, DrawerContent } from './Drawer';
