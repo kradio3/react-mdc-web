@@ -7,16 +7,18 @@ const propTypes = {
   col: PropTypes.number,
   tablet: PropTypes.number,
   phone: PropTypes.number,
+  order: PropTypes.number,
 };
 
-const Cell = ({ className, children, col, tablet, phone, name, ...otherProps }) => {
+const Cell = ({ className, children, col, tablet, phone, order, name, ...otherProps }) => {
   console.log(children);
   return (
   <div
     className={classnames('mdc-layout-grid__cell', className, {
       [`mdc-layout-grid__cell--span-${col}`]: col,
       [`mdc-layout-grid__cell--span-${tablet}-tablet`]: tablet,
-      [`mdc-layout-grid__cell--span-${phone}-phone`]: phone})}
+      [`mdc-layout-grid__cell--span-${phone}-phone`]: phone,
+      [`mdc-layout-grid__cell--order-${order}`]: order})}
     {...otherProps}
   >
     {children}
