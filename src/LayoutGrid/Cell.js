@@ -8,9 +8,12 @@ const propTypes = {
   tablet: PropTypes.number,
   phone: PropTypes.number,
   order: PropTypes.number,
+  top: PropTypes.bool,
+  middle: PropTypes.bool,
+  bottom: PropTypes.bool,
 };
 
-const Cell = ({ className, children, col, tablet, phone, order, name, ...otherProps }) => {
+const Cell = ({ className, children, col, tablet, phone, order, top, middle, bottom, name, ...otherProps }) => {
   console.log(children);
   return (
   <div
@@ -18,7 +21,10 @@ const Cell = ({ className, children, col, tablet, phone, order, name, ...otherPr
       [`mdc-layout-grid__cell--span-${col}`]: col,
       [`mdc-layout-grid__cell--span-${tablet}-tablet`]: tablet,
       [`mdc-layout-grid__cell--span-${phone}-phone`]: phone,
-      [`mdc-layout-grid__cell--order-${order}`]: order})}
+      [`mdc-layout-grid__cell--order-${order}`]: order,
+      [`mdc-layout-grid__cell--align-top`]:top,
+      [`mdc-layout-grid__cell--align-middle`]:middle,
+      [`mdc-layout-grid__cell--align-bottom`]:bottom })}
     {...otherProps}
   >
     {children}
