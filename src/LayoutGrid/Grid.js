@@ -6,18 +6,14 @@ const propTypes = {
   children: PropTypes.node,
 };
 
-const Grid = ({ className, children, name, ...otherProps }) => {
-  return (
+const Grid = ({ className, children, ...otherProps }) => (
   <div
     className={classnames('mdc-layout-grid', className)}
     {...otherProps}
   >
     {children}
   </div>
-);
-}
+  );
 Grid.propTypes = propTypes;
 export default Grid;
-
-
 
