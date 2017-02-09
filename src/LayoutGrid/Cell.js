@@ -14,7 +14,6 @@ const propTypes = {
 };
 
 const Cell = ({ className, children, col, tablet, phone, order, top, middle, bottom, name, ...otherProps }) => {
-  console.log(children);
   return (
   <div
     className={classnames('mdc-layout-grid__cell', className, {
@@ -22,7 +21,7 @@ const Cell = ({ className, children, col, tablet, phone, order, top, middle, bot
       [`mdc-layout-grid__cell--span-${tablet}-tablet`]: tablet,
       [`mdc-layout-grid__cell--span-${phone}-phone`]: phone,
       [`mdc-layout-grid__cell--order-${order}`]: order,
-      [`mdc-layout-grid__cell--align-top`]:top,
+      'mdc-layout-grid__cell--align-top':top,
       [`mdc-layout-grid__cell--align-middle`]:middle,
       [`mdc-layout-grid__cell--align-bottom`]:bottom })}
     {...otherProps}

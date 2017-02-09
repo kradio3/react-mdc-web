@@ -7,7 +7,6 @@ const propTypes = {
 };
 
 const Grid = ({ className, children, name, ...otherProps }) => {
-  console.log(children);
   return (
   <div
     className={classnames('mdc-layout-grid', className)}
