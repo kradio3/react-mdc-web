@@ -1,6 +1,6 @@
 {
   "name": "react-mdc-web",
-  "version": "0.4.5",
+  "version": "0.5.1",
   "description": "React web components for Material Design",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
@@ -57,7 +57,7 @@
     "compile": "babel src --ignore __tests__ --out-dir lib",
     "watch": "npm run compile -- --watch",
     "build-umd": "NODE_ENV=production webpack",
-    "release": "npm run lint npm run clean && npm run compile"
+    "release": "npm run lint npm run clean && npm run compile && npm run build-umd"
   },
   "dependencies": {
     "classnames": "^2.2.5",
