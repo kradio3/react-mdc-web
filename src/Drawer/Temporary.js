@@ -78,7 +78,9 @@ class Temporary extends Component {
     const { className, children, ...otherProps } = this.props;
     const { open, animating } = this.state;
 
-    const childs = children.map(child => React.cloneElement(child, { temporary: true }));
+    const childs = React.Children.map(children, child =>
+      React.cloneElement(child, { temporary: true }),
+    );
 
     return (
       <aside
