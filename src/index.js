@@ -1,7 +1,7 @@
 import '@material/theme/dist/mdc.theme.min.css';
 
 export { default as Button } from './Button';
-export { Card, CardHeader, CardTitle, CardSubtitle, CardText, CardActions } from './Card';
+export { Card, CardHeader, CardTitle, CardSubtitle, CardText, CardActions, CardMedia } from './Card';
 export { default as Elevation } from './Elevation';
 export { default as Fab } from './Fab';
 export { List, ListItem, ListDivider } from './List';
