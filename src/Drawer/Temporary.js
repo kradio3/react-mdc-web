@@ -1,16 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
-
-const ROOT = 'mdc-temporary-drawer';
-
-const cssClasses = {
-  ROOT,
-  DRAWER_SELECTOR: `${ROOT}__drawer`,
-  HEADER: `${ROOT}__header`,
-  OPEN: `${ROOT}--open`,
-  ANIMATING: `${ROOT}--animating`,
-  RIGHT: `${ROOT}--right`,
-};
+import DrawerShade from './DrawerShade';
+import DrawerPane from './DrawerPane';
 
 class Temporary extends Component {
 
@@ -25,12 +15,18 @@ class Temporary extends Component {
     event.stopPropagation();
   }
 
+  static isWrongPointer(pointerType) {
+    return pointerType && pointerType !== 'touch';
+  }
+
   constructor(props) {
     super(props);
     this.handleMenuToggle = this.handleMenuToggle.bind(this);
     this.handleShadeClick = this.handleShadeClick.bind(this);
-    this.handleDrawerRef = this.handleDrawerRef.bind(this);
-    this.handleTransitionEnd = this.handleTransitionEnd.bind(this);
+    this.handleTransitionend = this.handleTransitionend.bind(this);
+    this.handleTouchstart = this.handleTouchstart.bind(this);
+    this.handleTouchmove = this.handleTouchmove.bind(this);
+    this.handleTouchend = this.handleTouchend.bind(this);
     this.open = this.open.bind(this);
     this.close = this.close.bind(this);
     this.state = {};
@@ -52,16 +48,48 @@ class Temporary extends Component {
     }
   }
 
-  handleDrawerRef(nativeDrawer) {
-    this.drawer = nativeDrawer;
-  }
-
   handleShadeClick() {
     this.close();
   }
 
+  handleTouchstart({ pointerType, touches, pageX }, drawerWidth) {
+    if (!this.state.open) {
+      return;
+    }
+
+    if (Temporary.isWrongPointer(pointerType)) {
+      return;
+    }
+
+    this.startX = touches ? touches[0].pageX : pageX;
+    this.touchingSideNav = true;
+    this.drawerWidth = drawerWidth;
+    this.setState({ currentX: this.startX });
+  }
+
+  handleTouchmove({ pointerType, touches, pageX }) {
+    if (Temporary.isWrongPointer(pointerType)) {
+      return;
+    }
+    const currentX = touches ? touches[0].pageX : pageX;
+    this.setState({ currentX });
+  }
+
+  handleTouchend({ pointerType }) {
+    if (Temporary.isWrongPointer(pointerType)) {
+      return;
+    }
+    const newPosition = this.calculateDrawerPosition();
+    this.touchingSideNav = false;
+    // Did the user close the drawer by more than 50%?
+    if (Math.abs(newPosition / this.drawerWidth) >= 0.5) {
+      this.close();
+    } else {
+      this.open();
+    }
+  }
+
   open() {
-    this.drawer.addEventListener('transitionend', this.handleTransitionEnd);
     this.setState({ open: true, animating: true });
   }
 
@@ -69,9 +97,22 @@ class Temporary extends Component {
     this.setState({ open: false, animating: true });
   }
 
-  handleTransitionEnd() {
-    this.drawer.removeEventListener('transitionend', this.handleTransitionEnd);
+  handleTransitionend() {
     this.setState({ animating: false });
+  }
+
+  calculateDrawerPosition() {
+    if (this.touchingSideNav) {
+      return Math.min(0, this.state.currentX - this.startX);
+    }
+    return null;
+  }
+
+  calculateShadeOpacity(position) {
+    if (this.touchingSideNav) {
+      return Math.max(0, 1 + (1 * (position / this.drawerWidth)));
+    }
+    return null;
   }
 
   render() {
@@ -82,23 +123,30 @@ class Temporary extends Component {
       React.cloneElement(child, { temporary: true }),
     );
 
+    const position = this.calculateDrawerPosition();
+    const opacity = this.calculateShadeOpacity(position);
+
     return (
-      <aside
-        className={classnames(cssClasses.ROOT, {
-          [cssClasses.OPEN]: open,
-          [cssClasses.ANIMATING]: animating,
-        }, className)}
-        {...otherProps}
+      <DrawerShade
+        animating={animating}
+        className={className}
         onClick={this.handleShadeClick}
+        onTouchend={this.handleTouchend}
+        onTouchmove={this.handleTouchmove}
+        opacity={opacity}
+        open={open}
+        {...otherProps}
       >
-        <nav
-          className={cssClasses.DRAWER_SELECTOR}
+        <DrawerPane
           onClick={Temporary.handleDrawerClick}
-          ref={this.handleDrawerRef}
+          onTouchstart={this.handleTouchstart}
+          animating={animating}
+          onTransitionend={this.handleTransitionend}
+          position={position}
         >
-          { childs }
-        </nav>
-      </aside>
+          {childs}
+        </DrawerPane>
+      </DrawerShade>
     );
   }
 }

@@ -8,7 +8,11 @@ const propTypes = {
 
 const DrawerHeaderContent = ({ className, children, ...otherProps }) => (
   <div
-    className={classnames('mdc-temporary-drawer__header-content', className)}
+    className={classnames(
+      'mdc-temporary-drawer__header-content',
+      'mdc-theme--primary-bg',
+      'mdc-theme--text-primary-on-primary',
+      className)}
     {...otherProps}
   >
     {children}
