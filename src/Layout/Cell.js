@@ -7,7 +7,6 @@ const propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   col: PropTypes.number,
-  desktop: PropTypes.number,
   order: PropTypes.number,
   phone: PropTypes.number,
   tablet: PropTypes.number,
@@ -20,7 +19,6 @@ const Cell = ({
   children,
   className,
   col,
-  desktop,
   order,
   phone,
   tablet,
@@ -29,7 +27,6 @@ const Cell = ({
   <div
     className={classnames(ROOT, {
       [`${ROOT}--span-${col}`]: isDefined(col),
-      [`${ROOT}--span-${desktop}-desktop`]: isDefined(desktop),
       [`${ROOT}--span-${tablet}-tablet`]: isDefined(tablet),
       [`${ROOT}--span-${phone}-phone`]: isDefined(phone),
       [`${ROOT}--order-${order}`]: isDefined(order),
