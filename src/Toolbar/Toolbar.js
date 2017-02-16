@@ -1,20 +1,26 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
+import isDefined from '../utils/isDefined';
 
 const propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
+  title: PropTypes.string,
 };
 
-const Toolbar = ({ className, children, ...otherProps }) => (
-  <header className={classnames('mdc-toolbar', className)} >
-  <section className="mdc-toolbar__section mdc-toolbar__section--align-start">
-    <a className="material-icons">menu</a>
-    <span className="mdc-toolbar__title">Title</span>
-  </section>
+const ROOT = 'mdc-toolbar';
 
-  {children}
-</header>
+const Toolbar = ({ className, title, children, ...otherProps }) => (
+  <header className={classnames(ROOT, className)} >
+    { isDefined(title) &&
+      <section className="mdc-toolbar__section mdc-toolbar__section--align-start">
+        <i className="material-icons">menu</i>
+        <span className="mdc-toolbar__title">{title}</span>
+      </section>
+    }
+
+    {children}
+  </header>
 );
 Toolbar.propTypes = propTypes;
 export default Toolbar;
