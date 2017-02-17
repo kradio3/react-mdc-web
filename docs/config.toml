@@ -1,0 +1,34 @@
+siteTitle="React-Mdc-Web"
+headerTitle="React-Mdc-Web: Material components for React.js"
+baseColor = "#3367D6"
+linkPrefix = "/react-mdc-web"
+[[components]]
+  name = "Button"
+  path = "/components/button/"
+[[components]]
+  name = "Card"
+  path = "/components/card/"
+[[components]]
+  name = "Checkbox"
+  path = "/components/checkbox/"
+[[components]]
+  name = "Drawer"
+  path = "/components/drawer/"
+[[components]]
+  name = "Elevation"
+  path = "/components/elevation/"
+[[components]]
+  name = "FAB"
+  path = "/components/fab/"
+[[components]]
+  name = "Icon Toggle"
+  path = "/components/icon_toggle/"
+[[components]]
+  name = "Layout"
+  path = "/components/layout/"
+[[components]]
+  name = "List"
+  path = "/components/list/"
+[[components]]
+  name = "Text Field"
+  path = "/components/text_field/"

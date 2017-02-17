@@ -1,9 +1,14 @@
-# Material components for React
+# [Material components for React](https://kradio3.github.io/react-mdc-web/)
 [![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Travis build][travis-image]][travis-url]
 
 React components based on styles from [Material Design Components Web project](https://github.com/material-components/material-components-web). Components are written in React.js. Doesn't use MDC JS sources.
 
 ## Installation
+From CDN
+```html
+<script src="https://unpkg.com/react-mdc-web/out/react-mdc-web.js"></script>
+```
+From package manager
 ```sh
 npm i --save react-mdc-web
 ```
@@ -23,7 +28,7 @@ class MyComponent extends Component {
             </CardTitle>
           </CardHeader>
           <CardText> 
-            Lorem ipsum dolor sit amet, sint adipiscing ius eu, qui eu aliquid minimum imperdiet. In ridens impedit vis, an habeo accumsan dissentiunt eam, id cum elitr putant voluptatibus. Congue admodum mentitum per no, harum inimicus contentiones pri an. Sea eius modus adipiscing ei, his erat erroribus intellegebat cu.
+            Lorem ipsum dolor sit amet, sint adipiscing ius eu
           </CardText>
           <CardActions>
             <Button compact>Save</Button>
@@ -35,6 +40,8 @@ class MyComponent extends Component {
 }
 
 ```
+More samples could be found on [Documentation Site](https://kradio3.github.io/junk-pages/)
+
 
 ## License
 MIT, see [LICENSE](/LICENSE) for details

@@ -1,0 +1,55 @@
+html, body, #react-mount {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.site-title {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  text-decoration: none;
+}
+
+.page-title {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h3, h4 {
+  margin-bottom: 16px;
+}
+
+h5 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+a {
+  color: #3367d6;
+  text-decoration: none;
+}
+a:visited {
+  color: #3367d6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Prism.js overrides*/
+pre[class*="language-"]{
+  background-image: none;
+  border-radius: 0;
+}
+
+code[class*="language-"]{
+  font-family: 'Roboto Mono', monspace;
+  font-size: 0.85rem;
+}
