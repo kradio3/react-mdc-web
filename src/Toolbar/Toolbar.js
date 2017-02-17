@@ -6,12 +6,13 @@ const propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   title: PropTypes.string,
+  fixed: PropTypes.bool,
 };
 
 const ROOT = 'mdc-toolbar';
 
-const Toolbar = ({ className, title, children, ...otherProps }) => (
-  <header className={classnames(ROOT, className)} >
+const Toolbar = ({ className, title, fixed, children, ...otherProps }) => (
+  <header className={classnames(ROOT, { 'mdc-toolbar--fixed': fixed }, className)} {...otherProps} >
     { isDefined(title) &&
       <section className="mdc-toolbar__section mdc-toolbar__section--align-start">
         <i className="material-icons">menu</i>
