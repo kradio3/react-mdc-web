@@ -1,3 +1,20 @@
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/kradio3/react-mdc-web/compare/v0.5.1...v0.6.0) (2017-02-20)
+
+
+### Bug Fixes
+
+* **Elevation:** check definition of elevation level ([79e0da7](https://github.com/kradio3/react-mdc-web/commit/79e0da7))
+
+
+### Features
+
+* **CardMedia:** create new component ([78d81ce](https://github.com/kradio3/react-mdc-web/commit/78d81ce))
+* **Drawer:** possibility to close drawer by drag ([d710376](https://github.com/kradio3/react-mdc-web/commit/d710376))
+* **Layout:** remove desktop property from Cell ([0f04fbd](https://github.com/kradio3/react-mdc-web/commit/0f04fbd))
+
+
+
 <a name="0.5.1"></a>
 ## [0.5.1](https://github.com/kradio3/react-mdc-web/compare/7885033...v0.5.1) (2017-02-10)
 
