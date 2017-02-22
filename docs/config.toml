@@ -32,3 +32,6 @@ linkPrefix = "/react-mdc-web"
 [[components]]
   name = "Text Field"
   path = "/components/text_field/"
+[[components]]
+  name = "Snackbar"
+  path = "/components/snackbar/"
