@@ -56,7 +56,7 @@
     "test": "echo \"TODO tests\"",
     "clean": "rm -rf lib",
     "compile": "babel src --ignore __tests__ --out-dir lib",
-    "docs:develop":  "cd docs && ./node_modules/.bin/gatsby develop",
+    "docs:develop": "cd docs && ./node_modules/.bin/gatsby develop",
     "docs:build": "cd docs && NODE_ENV=production ./node_modules/.bin/gatsby build --prefix-links",
     "docs:deploy": "cd docs && ./node_modules/.bin/gh-pages -d public",
     "docs:release": "npm run docs:build && npm run docs:deploy",
@@ -67,6 +67,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "material-components-web": "^0.4.0"
+    "material-components-web": "^0.5.0"
   }
 }
