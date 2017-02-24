@@ -36,6 +36,7 @@ module.exports = React.createClass({
           />
           <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700" rel="stylesheet"/>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
           {css}
         </head>
         <body>

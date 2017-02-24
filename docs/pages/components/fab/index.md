@@ -1,17 +1,21 @@
 ---
 title: "Floating action button"
 ---
-Fab default
-```jsx
-<Fab>Default</Fab>
-```
 
-Fab mini
-```jsx
-<Fab mini>Mini</Fab>
+```react-snippet
+fabs
 ```
-
-Fab plain
 ```jsx
-<Fab plain>Plain</Fab>
+{/* Default */}
+<Fab><Icon name='create'/></Fab>
+
+{/* Mini */}
+<Fab mini><Icon name='create'/></Fab>
+
+{/* Plain */}
+<Fab plain><Icon name='create'/></Fab>
+
+{/* Plain mini */}
+<Fab plain mini><Icon name='create'/></Fab>
+
 ```

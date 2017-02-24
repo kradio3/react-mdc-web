@@ -2,7 +2,10 @@
 title: "Toolbar"
 ---
 
-Normal toolbar
+### Static toolbar
+```react-snippet
+normal-toolbar
+```
 ```jsx
 <Toolbar>
   <ToolbarSection align="start">
@@ -11,7 +14,11 @@ Normal toolbar
 </Toolbar>
 ```
 
-Fixed toolbar
+### Fixed toolbar
+```react-snippet
+fixed-toolbar
+```
+```jsx
 ```jsx
 <Toolbar fixed>
   <ToolbarSection align="start">
@@ -31,6 +38,10 @@ Fixed toolbar
 </Content>
 ```
 
+### Sections
+```react-snippet
+sections
+```
 ``` ToolbarSection ``` could be aligned at start, at center and at end of toolbar
 ```jsx
 <Toolbar>

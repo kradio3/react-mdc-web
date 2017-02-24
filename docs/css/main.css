@@ -43,6 +43,17 @@ a:hover {
   text-decoration: underline;
 }
 
+.demo-grid-1 .mdc-layout-grid__cell {
+  height: 100px;
+  background-color: #DDD;
+  color: #AAA;
+  font-size: 24px;
+  line-height: 100px;
+  padding: 0 24px;
+  display: flex;
+}
+
+
 /* Prism.js overrides*/
 pre[class*="language-"]{
   background-image: none;
@@ -53,3 +64,4 @@ code[class*="language-"]{
   font-family: 'Roboto Mono', monspace;
   font-size: 0.85rem;
 }
+

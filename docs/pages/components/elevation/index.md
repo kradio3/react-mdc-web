@@ -1,6 +1,9 @@
 ---
 title: "Elevation"
 ---
+```react-snippet
+elevations
+```
 
 Block elevated by Z axis for 0...24dp
 ```jsx

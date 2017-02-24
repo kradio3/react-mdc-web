@@ -2,30 +2,36 @@ var frontMatter = require('front-matter')
 var markdownIt = require('markdown-it')
 var objectAssign = require('object-assign')
 const prismjs = require('prismjs')
+const babel = require('babel-core');
 require('prismjs/components/prism-jsx');
 require('prismjs/components/prism-bash');
+var ReactDOM = require('react-dom');
+var ReactDOMServer = require('react-dom/server');
+var React = require('react');
 
 
 var highlight = function (str, lang) {
-  const langClass = 'language-'+lang;
+  const langClass = `language-${lang}`;
   const classes = langClass +' mdc-elevation--z1 mdc-elevation-transition';
   if (lang  && prismjs.languages[lang]) {
     try {
       const html = prismjs.highlight(str, prismjs.languages[lang]);
-      return '<pre class="'+classes+'"><code class="'+langClass+'">'+html+'</code></pre>';
+      return `<pre class='${classes}'><code class='${langClass}'>${html}</code></pre>`;
     } catch (_error) {
       console.log(_error);
       return '';
     }
+  } else if(lang === 'react-snippet'){
+    return `<pre></pre><div id='${str.trim()}'></div>`;
   }
   return ''
 }
 
 var md = markdownIt({
+  highlight,
   html: true,
   linkify: true,
   typographer: true,
-  highlight,
 });
 
 md.renderer.rules.heading_open  = function (tokens, idx, options, env, renderer) { 

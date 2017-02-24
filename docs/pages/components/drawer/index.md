@@ -2,9 +2,15 @@
 title: "Drawer"
 ---
 
-Permanent drawer
+### Permanent
+```react-snippet
+permanent
+```
 ```jsx
 <Drawer permanent>
+  <DrawerSpacer>
+    Spacer
+  </DrawerSpacer>
   <Navigation>
     <a href='#' 
       selected
@@ -17,14 +23,18 @@ Permanent drawer
   </Navigation>
 </Drawer>
 ```
-Temporary drawer
+### Temporary
+```react-snippet
+temporary
+```
 ```jsx
-<button 
-  id="trigger" 
-  className="material-icons"
+<Button 
+  id="trigger"
+  primary
+  raised 
 >
-  menu
-</button>
+  Show drawer
+</Button>
 
 <Drawer 
   target="trigger"

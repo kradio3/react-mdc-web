@@ -2,31 +2,43 @@
 title: "Button"
 ---
 
-Default button
+### Flat buttons
+```react-snippet
+flat-buttons
+```
+
 ```jsx
 <Button>Default</Button>
-```
-Raised button
-```jsx
-<Button raised>Raised</Button>
-```
-
-Dense button
-```jsx
 <Button dense>Dense</Button>
-```
-
-Primary button
-```jsx
 <Button primary>Primary</Button>
-```
-
-Compact button
-```jsx
 <Button compact>Compact</Button>
-```
-
-Accent button
-```jsx
 <Button accent>Accent</Button>
 ```
+### Raised buttons
+```react-snippet
+raised-buttons
+```
+```jsx
+<Button raised>Default</Button>
+<Button raised dense>Dense</Button>
+<Button raised primary>Primary</Button>
+<Button raised compact>Compact</Button>
+<Button raised accent>Accent</Button>
+```
+
+### Handle click
+```react-snippet
+click-button
+```
+```jsx
+<Button
+  raised 
+  primary
+  onClick={()=>{
+    let { counter } = this.state;
+    counter ++;
+    this.setState({ counter });
+  }}
+>
+  Increment
+</Button>

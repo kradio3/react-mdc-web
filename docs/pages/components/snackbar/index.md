@@ -1,7 +1,10 @@
 ---
 title: "Snackbar"
 ---
-Snackbar with single line of text
+### Single line
+```react-snippet
+single-line
+```
 ```jsx
 <Snackbar 
   onTimeout={() => {this.setState({snackbar: false});}}
@@ -12,6 +15,9 @@ Snackbar with single line of text
 ```
 
 You can add a single action to snackbar. When user clicks on action button, ```onClick``` callback will be fired
+```react-snippet
+single-line-action
+```
 ```jsx
 <Snackbar 
   action="undo"
@@ -22,8 +28,23 @@ You can add a single action to snackbar. When user clicks on action button, ```o
   Document modified
 </Snackbar>
 ```
-
-Snackbar with multiline text
+Default timeout is 2750 ms. But you can override it by ```timeout``` property
+```react-snippet
+single-line-timeout
+```
+```jsx
+<Snackbar 
+  timeout={5000}
+  onTimeout={() => {this.setState({snackbar: false});}}
+  open={this.state.snackbar}
+>
+  Loading complete
+</Snackbar>
+```
+### Multiline
+```react-snippet
+multi-line
+```
 ```jsx
 <Snackbar 
   multiline
@@ -35,6 +56,9 @@ Snackbar with multiline text
 ```
 
 In multiline snackbar you can place action button below the text
+```react-snippet
+multi-line-bottom-action
+```
 ```jsx
 <Snackbar 
   action="undo"
@@ -48,13 +72,3 @@ In multiline snackbar you can place action button below the text
 </Snackbar>
 ```
 
-Default timeout is 2750 ms. But you can override it by ```timeout``` property
-```jsx
-<Snackbar 
-  timeout={5000}
-  onTimeout={() => {this.setState({snackbar: false});}}
-  open={this.state.snackbar}
->
-  Loading complete
-</Snackbar>
-```

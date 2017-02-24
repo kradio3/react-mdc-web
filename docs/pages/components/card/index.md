@@ -2,7 +2,10 @@
 title: "Card"
 ---
 
-Text card
+### Simple card
+```react-snippet
+text-card
+```
 ```jsx
 <Card>
   <CardHeader>
@@ -18,11 +21,14 @@ Text card
   </CardActions>
 </Card>
 ```
-Media card
+### Media card
+```react-snippet
+media-card
+```
 ```jsx
 <Card>
   <CardHeader>
-    <CardTitle>Title</CardTitle>
+    <CardTitle>Title goes here</CardTitle>
   </CardHeader>
   <CardMedia 
     style={{
@@ -31,5 +37,12 @@ Media card
       backgroundSize: 'cover',
     }}
   />
+  <CardText>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </CardText>
+  <CardActions>
+    <Button compact primary>action 1</Button>
+    <Button compact >action 2</Button>
+  </CardActions>
 </Card>
 ```
