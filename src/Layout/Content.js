@@ -15,7 +15,7 @@ const Content = ({
   fixedToolbar,
   ...otherProps
 }) => {
-  const classes = classnames({ 'mdc-toolbar-fixed-adjust': fixedToolbar }, className);
+  const classes = classnames({ 'mdc-toolbar__fixed-adjust': fixedToolbar }, className);
   return React.createElement(component || 'main', {
     className: classes,
     ...otherProps,

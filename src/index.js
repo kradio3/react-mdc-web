@@ -13,3 +13,4 @@ export { default as Icon } from './Icon';
 export { Drawer, DrawerSpacer, Navigation, DrawerHeader, DrawerHeaderContent, DrawerContent } from './Drawer';
 export { Grid, Cell, Layout, Content } from './Layout';
 export { default as Snackbar } from './Snackbar';
+export { Toolbar, ToolbarSection, ToolbarTitle } from './Toolbar';
