@@ -11,5 +11,5 @@ export { default as FormField } from './FormField';
 export { default as IconToggle } from './IconToggle';
 export { default as Icon } from './Icon';
 export { Drawer, DrawerSpacer, Navigation, DrawerHeader, DrawerHeaderContent, DrawerContent } from './Drawer';
-export { Grid, Cell, Layout } from './Layout';
+export { Grid, Cell, Layout, Content } from './Layout';
 export { default as Snackbar } from './Snackbar';
