@@ -8,6 +8,10 @@ const propTypes = {
   fixedToolbar: PropTypes.bool,
 };
 
+const defaultProps = {
+  component: 'main',
+};
+
 const Content = ({
   className,
   children,
@@ -16,11 +20,12 @@ const Content = ({
   ...otherProps
 }) => {
   const classes = classnames({ 'mdc-toolbar__fixed-adjust': fixedToolbar }, className);
-  return React.createElement(component || 'main', {
+  return React.createElement(component, {
     className: classes,
     ...otherProps,
   }, children);
 };
 Content.propTypes = propTypes;
+Content.defaultProps = defaultProps;
 export default Content;
 
