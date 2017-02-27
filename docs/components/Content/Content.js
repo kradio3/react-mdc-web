@@ -1,12 +1,13 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
+import Content from '../../../src/Content';
 
 const propTypes = {
   children: PropTypes.node,
 };
 
-const Content = ({ children, ...otherProps }) => (
-  <div 
+const AppContent = ({ children }) => (
+  <Content 
     style={{
       display: "flex",
       boxSizing: "border-box",
@@ -14,7 +15,7 @@ const Content = ({ children, ...otherProps }) => (
     }}
   >
     {children}
-  </div>
+  </Content>
 );
-Content.propTypes = propTypes;
-export default Content;
+AppContent.propTypes = propTypes;
+export default AppContent;

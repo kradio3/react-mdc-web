@@ -34,7 +34,7 @@ Snackbar with multiline text
 </Snackbar>
 ```
 
-In multiline snackbar you can place action button below text
+In multiline snackbar you can place action button below the text
 ```jsx
 <Snackbar 
   action="undo"

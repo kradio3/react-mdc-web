@@ -7,12 +7,11 @@ import { colors, activeColors } from 'utils/colors'
 import typography from 'utils/typography'
 import { config } from 'config'
 import { 
-  Elevation,
   Drawer,
   DrawerSpacer,
   Navigation,
   NavigationItem,
-} from 'react-mdc-web/lib'
+} from '../../src'
 import Toolbar from 'components/Toolbar';
 import Layout from 'components/Layout';
 import Content from 'components/Content';

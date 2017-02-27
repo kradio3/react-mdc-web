@@ -5,7 +5,7 @@ const propTypes = {
   children: PropTypes.node,
 };
 
-const Layout = ({ children, ...otherProps }) => (
+const Layout = ({ children }) => (
   <div 
     className='mdc-typography'
     style={{

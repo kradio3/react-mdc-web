@@ -21,17 +21,20 @@ linkPrefix = "/react-mdc-web"
   name = "FAB"
   path = "/components/fab/"
 [[components]]
+  name = "Grid"
+  path = "/components/grid/"
+[[components]]
   name = "Icon Toggle"
   path = "/components/icon_toggle/"
-[[components]]
-  name = "Layout"
-  path = "/components/layout/"
 [[components]]
   name = "List"
   path = "/components/list/"
 [[components]]
+  name = "Snackbar"
+  path = "/components/snackbar/"
+[[components]]
   name = "Text Field"
   path = "/components/text_field/"
 [[components]]
-  name = "Snackbar"
-  path = "/components/snackbar/"
+  name = "Toolbar"
+  path = "/components/toolbar/"

@@ -1,5 +1,5 @@
 ---
-title: "Layout"
+title: "Grid"
 ---
 
 In default desktop mode Grid has 12 columns

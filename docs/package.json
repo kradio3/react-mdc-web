@@ -7,7 +7,6 @@
     "lodash": "^4.17.2",
     "react": "^15.4.2",
     "react-document-title": "^2.0.1",
-    "react-mdc-web": "file:///home/yaa/workspace/react-mdc-web",
     "react-motion": "^0.1.0",
     "react-responsive-grid": "^0.3.3",
     "react-typography": "^0.15.0",
