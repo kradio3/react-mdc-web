@@ -5,7 +5,6 @@ const propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   component: PropTypes.string,
-  fixedToolbar: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -16,10 +15,9 @@ const Content = ({
   className,
   children,
   component,
-  fixedToolbar,
   ...otherProps
 }) => {
-  const classes = classnames({ 'mdc-toolbar__fixed-adjust': fixedToolbar }, className);
+  const classes = classnames('mdc-content', className);
   return React.createElement(component, {
     className: classes,
     ...otherProps,
