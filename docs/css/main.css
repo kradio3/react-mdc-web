@@ -47,7 +47,7 @@ a:hover {
   height: 100px;
   background-color: #DDD;
   color: #AAA;
-  font-size: 24px;
+  font-size: 1rem;
   line-height: 100px;
   padding: 0 24px;
   display: flex;
