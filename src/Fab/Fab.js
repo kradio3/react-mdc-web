@@ -1,43 +1,46 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Children, cloneElement } from 'react';
 import classnames from 'classnames';
+import Icon from '../Icon';
 
+const ROOT='mdc-fab';
 
-class Fab extends React.PureComponent {
-  static propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.node,
-    mini: PropTypes.bool,
-    plain: PropTypes.bool,
-  };
+const propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
+  mini: PropTypes.bool,
+  plain: PropTypes.bool,
+};
 
-  render() {
-    const {
-      className,
-      children,
-      mini,
-      plain,
-      ...otherProps
-    } = this.props;
-    const classes = classnames(
-      'mdc-fab', {
-        'mdc-fab--mini': mini,
-        'mdc-fab--plain': plain,
-      }, className);
-    return (
-      <button
-        className={classes}
-        ref={(native) => {
-          if (native) {
-            const icon = native.querySelector('i');
-            icon.classList.add('mdc-fab__icon');
-          }
-        }}
-        {...otherProps}
-      >
-        {children}
-      </button>
-    );
-  }
+const Fab = ({
+  className,
+  mini,
+  plain,
+  ...otherProps,
+}) => {
+  const classes = classnames(
+    ROOT, {
+      [`${ROOT}--mini`]: mini,
+      [`${ROOT}--plain`]: plain,
+    }, className);
+
+  const children = Children.map(otherProps.children, child => {
+    if (child.type === Icon) {
+      const childClasses = child.props.className;
+      return cloneElement(child, {
+        className: classnames(childClasses, 'mdc-fab__icon'),
+      });
+    }
+    return child;
+  });
+
+  return (
+    <button
+      className={classes}
+      {...otherProps}
+    >
+      {children}
+    </button>
+  );
 }
-
+Fab.propTypes = propTypes;
 export default Fab;
