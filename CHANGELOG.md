@@ -1,3 +1,13 @@
+<a name="0.7.1"></a>
+## [0.7.1](https://github.com/kradio3/react-mdc-web/compare/v0.7.0...v0.7.1) (2017-03-02)
+
+
+### Bug Fixes
+
+* **Fab:** correct icon position ([eba8518](https://github.com/kradio3/react-mdc-web/commit/eba8518))
+
+
+
 <a name="0.7.0"></a>
 # [0.7.0](https://github.com/kradio3/react-mdc-web/compare/v0.6.0...v0.7.0) (2017-03-02)
 
