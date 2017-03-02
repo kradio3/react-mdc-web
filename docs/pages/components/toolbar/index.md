@@ -19,7 +19,6 @@ normal-toolbar
 fixed-toolbar
 ```
 ```jsx
-```jsx
 <Toolbar fixed>
   <ToolbarSection align="start">
     <ToolbarTitle>Title</ToolbarTitle>

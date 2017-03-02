@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
-import Toolbar from '../../../src/Toolbar/Toolbar';
+import {Toolbar} from '../../../src/Toolbar';
 import { colors, activeColors } from 'utils/colors'
 
 const propTypes = {
