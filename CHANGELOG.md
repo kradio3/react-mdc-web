@@ -1,3 +1,26 @@
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/kradio3/react-mdc-web/compare/v0.6.0...v0.7.0) (2017-03-02)
+
+
+### Code Refactoring
+
+* **Grid:** move Grid and Cell to new directory ([5200f07](https://github.com/kradio3/react-mdc-web/commit/5200f07))
+
+
+### Features
+
+* **Content:** create new component ([582ed05](https://github.com/kradio3/react-mdc-web/commit/582ed05))
+* **Layout:** create new component ([2425a64](https://github.com/kradio3/react-mdc-web/commit/2425a64))
+* **Snackbar:** create new component ([26ed5b6](https://github.com/kradio3/react-mdc-web/commit/26ed5b6))
+* **Toolbar:** create new component ([388452d](https://github.com/kradio3/react-mdc-web/commit/388452d))
+
+
+### BREAKING CHANGES
+
+* Grid: Grid and Cell components has moved to directory 'Grid'
+
+
+
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/kradio3/react-mdc-web/compare/v0.5.1...v0.6.0) (2017-02-20)
 
