@@ -2,7 +2,7 @@ import React, { PropTypes, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import Icon from '../Icon';
 
-const ROOT='mdc-fab';
+const ROOT = 'mdc-fab';
 
 const propTypes = {
   className: PropTypes.string,
@@ -15,7 +15,7 @@ const Fab = ({
   className,
   mini,
   plain,
-  ...otherProps,
+  ...otherProps
 }) => {
   const classes = classnames(
     ROOT, {
@@ -23,7 +23,7 @@ const Fab = ({
       [`${ROOT}--plain`]: plain,
     }, className);
 
-  const children = Children.map(otherProps.children, child => {
+  const children = Children.map(otherProps.children, (child) => {
     if (child.type === Icon) {
       const childClasses = child.props.className;
       return cloneElement(child, {
@@ -41,6 +41,6 @@ const Fab = ({
       {children}
     </button>
   );
-}
+};
 Fab.propTypes = propTypes;
 export default Fab;
