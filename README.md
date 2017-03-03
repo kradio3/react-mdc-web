@@ -40,7 +40,7 @@ class MyComponent extends Component {
 }
 
 ```
-More samples could be found on [Documentation Site](https://kradio3.github.io/junk-pages/)
+More samples could be found on the [Documentation Site](https://kradio3.github.io/react-mdc-web/)
 
 
 ## License
