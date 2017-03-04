@@ -11,6 +11,8 @@ import {
   DrawerSpacer,
   Navigation,
   NavigationItem,
+  ListGroup,
+  ListDivider,
 } from '../../src'
 import Toolbar from 'components/Toolbar';
 import Layout from 'components/Layout';
@@ -29,16 +31,18 @@ module.exports = React.createClass({
     }
   },
   render () {
-    const docsActive = includes(this.props.location.pathname, '/docs/')
-    const examplesActive = includes(this.props.location.pathname, '/examples/')
-    const componentLinks = config.components.map(({name, path}) => (
+    const isIntroductionActive = this.props.location.pathname==='/';
+    const componentLinks = config.components.map(({name, path}) => { 
+      const isActive = this.props.location.pathname===path;
+      return (
       <Link 
         key={name}
         to={prefixLink(path)} 
+        selected={ isActive }
       >
         {name}
       </Link>
-    ));
+    ) });
 
     return (
       <Layout>
@@ -67,9 +71,20 @@ module.exports = React.createClass({
             permanent 
             style={{height: 'inherit', minHeight: '100%'}}
           >
-            <Navigation>
-              {componentLinks}
-            </Navigation>
+            <ListGroup>
+              <Navigation>
+                <Link 
+                  to={prefixLink('/')} 
+                  selected={ isIntroductionActive }
+                >
+                  {'Introduction'}
+                </Link>
+              </Navigation>
+              <ListDivider/>
+              <Navigation>
+                {componentLinks}
+              </Navigation>
+            </ListGroup>
           </Drawer>
           <main style={{padding: '16px', flex: '1'}}>
             {this.props.children}
