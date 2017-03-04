@@ -6,12 +6,12 @@ const propTypes = {
   children: PropTypes.node,
 };
 
-const ListItem = ({ className, children }) => (
-  <li
-    className={classnames('mdc-list-item', className)}
+const ListGroup = ({ className, children }) => (
+  <div
+    className={classnames('mdc-list-group', className)}
   >
     {children}
-  </li>
+  </div>
 );
-ListItem.propTypes = propTypes;
-export default ListItem;
+ListGroup.propTypes = propTypes;
+export default ListGroup;
