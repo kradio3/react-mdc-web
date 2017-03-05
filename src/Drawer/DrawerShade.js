@@ -17,13 +17,6 @@ class DrawerShade extends React.PureComponent {
     opacity: PropTypes.number,
   };
 
-  componentDidMount() {
-    const { onClick, onTouchmove, onTouchend } = this.props;
-    this.native.addEventListener('click', onClick);
-    this.native.addEventListener('touchmove', onTouchmove);
-    this.native.addEventListener('touchend', onTouchend);
-  }
-
   componentWillReceiveProps(next) {
     const { opacity } = this.props;
     if (opacity !== next.opacity && isSupportCssCustomProperties()) {
@@ -31,18 +24,14 @@ class DrawerShade extends React.PureComponent {
     }
   }
 
-  componentWillUnmount() {
-    const { onClick, onTouchmove, onTouchend } = this.props;
-    this.removeEventListener('click', onClick);
-    this.removeEventListener('touchmove', onTouchmove);
-    this.removeEventListener('touchend', onTouchend);
-  }
-
   render() {
     const {
       animating,
       className,
       children,
+      onClick,
+      onTouchend,
+      onTouchmove,
       open,
     } = this.props;
 
@@ -53,6 +42,9 @@ class DrawerShade extends React.PureComponent {
           [`${ROOT}--animating`]: animating,
         }, className)}
         ref={(native) => { this.native = native; }}
+        onClick={onClick}
+        onTouchEnd={onTouchend}
+        onTouchMove={onTouchmove}
       >
         {children}
       </aside>

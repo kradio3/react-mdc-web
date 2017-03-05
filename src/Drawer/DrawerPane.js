@@ -20,12 +20,6 @@ class DrawerPane extends React.PureComponent {
     this.handleTouchstart = this.handleTouchstart.bind(this);
   }
 
-  componentDidMount() {
-    const { onClick } = this.props;
-    this.native.addEventListener('click', onClick);
-    this.native.addEventListener('touchstart', this.handleTouchstart);
-  }
-
   componentWillReceiveProps(next) {
     const { animating, position } = this.props;
     if (animating !== next.animating && next.animating) {
@@ -35,12 +29,6 @@ class DrawerPane extends React.PureComponent {
     if (position !== next.position) {
       this.setTransformPosition(next.position);
     }
-  }
-
-  componentWillUnmount() {
-    const { onClick } = this.props;
-    this.removeEventListener('click', onClick);
-    this.removeEventListener('touchstart', this.handleTouchstart);
   }
 
   getTransformPropertyName() {
@@ -73,12 +61,15 @@ class DrawerPane extends React.PureComponent {
     const {
       className,
       children,
+      onClick
     } = this.props;
 
     return (
       <nav
         className={classnames(`${ROOT}__drawer`, className)}
         ref={(native) => { this.native = native; }}
+        onClick={onClick}
+        onTouchStart={this.handleTouchstart}
       >
         {children}
       </nav>
