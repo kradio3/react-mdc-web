@@ -61,7 +61,7 @@ class DrawerPane extends React.PureComponent {
     const {
       className,
       children,
-      onClick
+      onClick,
     } = this.props;
 
     return (
