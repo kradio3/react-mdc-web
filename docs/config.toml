@@ -30,6 +30,9 @@ linkPrefix = "/react-mdc-web"
   name = "List"
   path = "/components/list/"
 [[components]]
+  name = "Radio"
+  path = "/components/radio/"
+[[components]]
   name = "Snackbar"
   path = "/components/snackbar/"
 [[components]]
