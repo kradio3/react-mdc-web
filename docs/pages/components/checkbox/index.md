@@ -8,7 +8,6 @@ default-checkbox
 ```
 ```jsx
 <Checkbox 
-  id="allow-everything" 
   onChange={({target: {checked}})=>{
     this.setState({checked})
   }}
@@ -22,7 +21,6 @@ indeterminate-checkbox
 ```
 ```jsx
 <Checkbox 
-  id="allow-everything" 
   onChange={({target: {checked}})=>{
     this.setState({checked, indeterminate:false})
   }}
@@ -36,14 +34,13 @@ indeterminate-checkbox
 labeled-checkbox
 ```
 ```jsx
-<FormField>
+<FormField id="labeled-checkbox">
   <Checkbox 
-    id="labeled-checkbox" 
     onChange={({target: {checked}})=>{
       this.setState({checked})
     }}
     checked={this.state.checked}
   />
-  <label htmlFor="labeled-checkbox">Add some labels</label>
+  <label>Add some labels</label>
 </FormField>
 ```

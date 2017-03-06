@@ -11,15 +11,14 @@ class Labeled extends React.PureComponent {
 
   render () {
     return (
-      <FormField>      
+      <FormField id="labeled-checkbox1">
         <Checkbox 
-          id="labeled-checkbox1" 
           onChange={({target: {checked}})=>{
             this.setState({checked})
           }}
           checked={this.state.checked}
         />
-        <label htmlFor="labeled-checkbox1">Add some labels</label>
+        <label>Add some labels</label>
       </FormField>    
     )
   }
