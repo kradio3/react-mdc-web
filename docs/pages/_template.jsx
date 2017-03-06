@@ -32,6 +32,7 @@ module.exports = React.createClass({
   },
   render () {
     const isIntroductionActive = this.props.location.pathname==='/';
+    const isCustomizeActive = this.props.location.pathname==='/customize/';
     const componentLinks = config.components.map(({name, path}) => { 
       const isActive = this.props.location.pathname===path;
       return (
@@ -78,6 +79,12 @@ module.exports = React.createClass({
                   selected={ isIntroductionActive }
                 >
                   {'Introduction'}
+                </Link>
+                <Link 
+                  to={prefixLink('/customize/')} 
+                  selected={ isCustomizeActive }
+                >
+                  {'Customize'}
                 </Link>
               </Navigation>
               <ListDivider/>
