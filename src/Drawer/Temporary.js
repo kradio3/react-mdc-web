@@ -7,7 +7,8 @@ class Temporary extends Component {
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
-    target: PropTypes.string,
+    open: PropTypes.bool,
+    onClose: PropTypes.func,
     header: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
   };
 
@@ -21,30 +22,18 @@ class Temporary extends Component {
 
   constructor(props) {
     super(props);
-    this.handleMenuToggle = this.handleMenuToggle.bind(this);
     this.handleShadeClick = this.handleShadeClick.bind(this);
     this.handleTransitionend = this.handleTransitionend.bind(this);
     this.handleTouchstart = this.handleTouchstart.bind(this);
     this.handleTouchmove = this.handleTouchmove.bind(this);
     this.handleTouchend = this.handleTouchend.bind(this);
-    this.open = this.open.bind(this);
     this.close = this.close.bind(this);
     this.state = {};
   }
 
-  componentDidMount() {
-    const toggle = document.getElementById(this.props.target);
-    if (toggle) {
-      toggle.addEventListener('click', this.handleMenuToggle);
-    }
-  }
-
-  handleMenuToggle(event) {
-    event.stopPropagation();
-    if (this.state.open) {
-      this.close();
-    } else {
-      this.open();
+  componentWillReceiveProps(newProps) {
+    if (this.props.open !== newProps.open) {
+      this.setState({ animating: true });
     }
   }
 
@@ -53,7 +42,7 @@ class Temporary extends Component {
   }
 
   handleTouchstart({ pointerType, touches, pageX }, drawerWidth) {
-    if (!this.state.open) {
+    if (!this.props.open) {
       return;
     }
 
@@ -81,20 +70,20 @@ class Temporary extends Component {
     }
     const newPosition = this.calculateDrawerPosition();
     this.touchingSideNav = false;
+
+    this.setState({ animating: true });
+
     // Did the user close the drawer by more than 50%?
     if (Math.abs(newPosition / this.drawerWidth) >= 0.5) {
       this.close();
-    } else {
-      this.open();
     }
   }
 
-  open() {
-    this.setState({ open: true, animating: true });
-  }
-
   close() {
-    this.setState({ open: false, animating: true });
+    const { onClose } = this.props;
+    if (typeof onClose === 'function') {
+      onClose();
+    }
   }
 
   handleTransitionend() {
@@ -116,8 +105,8 @@ class Temporary extends Component {
   }
 
   render() {
-    const { className, children, ...otherProps } = this.props;
-    const { open, animating } = this.state;
+    const { className, children, open, ...otherProps } = this.props;
+    const { animating } = this.state;
 
     const childs = React.Children.map(children, child =>
       React.cloneElement(child, { temporary: true }),
