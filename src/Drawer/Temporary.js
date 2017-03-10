@@ -7,7 +7,8 @@ class Temporary extends Component {
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
-    target: PropTypes.string,
+    open: PropTypes.bool,
+    onClose: PropTypes.func,
     header: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
   };
 
@@ -28,6 +29,12 @@ class Temporary extends Component {
     this.handleTouchend = this.handleTouchend.bind(this);
     this.close = this.close.bind(this);
     this.state = {};
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (this.props.open !== newProps.open) {
+      this.setState({ animating: true });
+    }
   }
 
   handleShadeClick() {
@@ -64,7 +71,7 @@ class Temporary extends Component {
     const newPosition = this.calculateDrawerPosition();
     this.touchingSideNav = false;
 
-    this.setState({animating: true});
+    this.setState({ animating: true });
 
     // Did the user close the drawer by more than 50%?
     if (Math.abs(newPosition / this.drawerWidth) >= 0.5) {
@@ -74,7 +81,9 @@ class Temporary extends Component {
 
   close() {
     const { onClose } = this.props;
-    (typeof onClose == "function") && onClose();
+    if (typeof onClose === 'function') {
+      onClose();
+    }
   }
 
   handleTransitionend() {
@@ -93,12 +102,6 @@ class Temporary extends Component {
       return Math.max(0, 1 + (1 * (position / this.drawerWidth)));
     }
     return null;
-  }
-
-  componentWillReceiveProps (newProps) {
-    if (this.props.open != newProps.open) {
-      this.setState({animating: true});
-    }
   }
 
   render() {
