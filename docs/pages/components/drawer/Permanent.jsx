@@ -15,17 +15,12 @@ class Permanent extends React.PureComponent {
     return (
       <Drawer permanent>
         <DrawerSpacer>
-          Spacer
+          Directions
         </DrawerSpacer>
         <Navigation>
-          <a href='#' 
-            selected
-          >
-            <Icon name='inbox'/>
-            Inbox
-          </a>
-          <a href='#'><Icon name='star'/>Star</a>
-          <a href='#'><Icon name='check'/>Check</a>
+          <a href='#' selected><Icon name='directions_bus'/>Bus</a>
+          <a href='#'><Icon name='directions_railway'/>Railway</a>
+          <a href='#'><Icon name='directions_bike'/>Bike</a>
         </Navigation>
       </Drawer>
     )

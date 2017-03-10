@@ -15,8 +15,6 @@ const AppToolbar = ({ className, children, ...otherProps }) => (
       padding: '0 16px',
       paddingLeft: '72px',
       boxSizing: 'border-box',
-      background: colors.bg,
-      color: colors.fg,
     }}
   >
     {children}

@@ -12,32 +12,33 @@ class Permanent extends React.PureComponent {
 
   constructor(props){
     super(props);
-    this.state={};
+    this.state={isOpen: false};
   }
 
   render () {
     return (
       <div>
         <Button 
-          id="trigger"
           primary
           raised 
+          onClick={()=> { this.setState({isOpen: !this.state.isOpen}) }}
         >
           Show drawer
         </Button>
         <Drawer 
-          target="trigger"
+          open={this.state.isOpen}
+          onClose={()=> { this.setState({isOpen: false}) }}
         >
           <DrawerHeader>
             <DrawerHeaderContent>
-              Header here
+              Directions
             </DrawerHeaderContent>
           </DrawerHeader>
           <DrawerContent>
             <Navigation>
-              <a href='#' selected><Icon name='inbox'/>Inbox</a>
-              <a href='#'><Icon name='star'/>Star</a>
-              <a href='#'><Icon name='check'/>Check</a>
+              <a href='#' selected><Icon name='directions_bus'/>Bus</a>
+              <a href='#'><Icon name='directions_railway'/>Railway</a>
+              <a href='#'><Icon name='directions_bike'/>Bike</a>
             </Navigation>
           </DrawerContent>
         </Drawer>
