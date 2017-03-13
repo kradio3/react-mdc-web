@@ -37,7 +37,7 @@ labeled-radio
 </FormField>
 ```
 ### Radio group component
-You can wrap radio buttons to ```RadioGroup``` component. It's based on ```List``` and calculates ```checked``` properties depending on given ```value```
+You can wrap radio buttons to ```RadioGroup``` component. It's based on ```<List/>``` and calculates ```checked``` properties depending on given ```value```
 ```react-snippet
 radio-group
 ```
