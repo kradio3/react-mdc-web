@@ -1,6 +1,6 @@
 {
   "name": "react-mdc-web",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "React web components for Material Design",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",

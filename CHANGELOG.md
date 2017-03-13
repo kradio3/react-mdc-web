@@ -1,3 +1,30 @@
+<a name="0.8.0"></a>
+# [0.8.0](https://github.com/kradio3/react-mdc-web/compare/v0.7.1...v0.8.0) (2017-03-13)
+
+
+### Bug Fixes
+
+* **Drawer:** Drawer inadvertently intercepts events ([de56a4a](https://github.com/kradio3/react-mdc-web/commit/de56a4a))
+
+
+### Code Refactoring
+
+* **Drawer:** convert drawer to use a declarative pattern (#6) ([f3d1115](https://github.com/kradio3/react-mdc-web/commit/f3d1115))
+
+
+### Features
+
+* **ListDivider:** render hl or li, depending of parent tag ([e23ca7c](https://github.com/kradio3/react-mdc-web/commit/e23ca7c))
+* **ListGroup:** create new component ([5cdaadd](https://github.com/kradio3/react-mdc-web/commit/5cdaadd))
+* **Radio:** create new component ([4748f71](https://github.com/kradio3/react-mdc-web/commit/4748f71))
+
+
+### BREAKING CHANGES
+
+* Drawer: ```target``` property is not supported anymore. To open/close drawer use ```open``` property 
+
+
+
 <a name="0.7.1"></a>
 ## [0.7.1](https://github.com/kradio3/react-mdc-web/compare/v0.7.0...v0.7.1) (2017-03-02)
 
