@@ -31,10 +31,10 @@ module.exports = React.createClass({
     }
   },
   render () {
-    const isIntroductionActive = this.props.location.pathname==='/';
-    const isCustomizeActive = this.props.location.pathname==='/customize/';
+    const isIntroductionActive = this.props.location.pathname===prefixLink('/');
+    const isCustomizeActive = this.props.location.pathname===prefixLink('/customize/');
     const componentLinks = config.components.map(({name, path}) => { 
-      const isActive = this.props.location.pathname===path;
+      const isActive = this.props.location.pathname===prefixLink(path);
       return (
       <Link 
         key={name}
