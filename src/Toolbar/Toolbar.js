@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 const ROOT = 'mdc-toolbar';
 const FIXED = `${ROOT}--fixed`;
-const ADJUST = `${ROOT}__fixed-adjust`;
+const ADJUST = `${ROOT}-fixed-adjust`;
 
 class Toolbar extends React.PureComponent {
 

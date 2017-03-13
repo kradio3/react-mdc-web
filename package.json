@@ -67,6 +67,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "material-components-web": "^0.5.0"
+    "material-components-web": "^0.6.0"
   }
 }
