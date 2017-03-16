@@ -15,3 +15,4 @@ export { default as Snackbar } from './Snackbar';
 export { Toolbar, ToolbarSection, ToolbarTitle, ToolbarRow } from './Toolbar';
 export { default as Content } from './Content';
 export { Radio, RadioGroup } from './Radio';
+export { Menu, MenuItem, MenuDivider, MenuAnchor } from './Menu';

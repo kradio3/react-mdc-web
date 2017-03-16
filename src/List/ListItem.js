@@ -6,9 +6,10 @@ const propTypes = {
   children: PropTypes.node,
 };
 
-const ListItem = ({ className, children }) => (
+const ListItem = ({ className, children, ...otherProps }) => (
   <li
     className={classnames('mdc-list-item', className)}
+    {...otherProps}
   >
     {children}
   </li>

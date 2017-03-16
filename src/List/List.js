@@ -8,7 +8,7 @@ const propTypes = {
   dense: PropTypes.bool,
 };
 
-const List = ({ className, children, dense }) => {
+const List = ({ className, children, dense, ...otherProps }) => {
   const childs = Children.map(children, (child) => {
     if (child.type === ListDivider) {
       return cloneElement(child, { isListItem: true });
@@ -20,6 +20,7 @@ const List = ({ className, children, dense }) => {
       className={classnames('mdc-list', {
         'mdc-list--dense': dense,
       }, className)}
+      {...otherProps}
     >
       {childs}
     </ul>

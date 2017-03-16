@@ -3,7 +3,6 @@ import DrawerShade from './DrawerShade';
 import DrawerPane from './DrawerPane';
 
 class Temporary extends Component {
-
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
