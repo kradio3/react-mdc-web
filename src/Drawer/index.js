@@ -1,6 +1,3 @@
-import '@material/drawer/dist/mdc.drawer.min.css';
-import '@material/list/dist/mdc.list.min.css';
-
 export { default as Drawer } from './Drawer';
 export { default as DrawerSpacer } from './DrawerSpacer';
 export { default as Navigation } from './Navigation';

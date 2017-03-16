@@ -1,5 +1,3 @@
-import '@material/theme/dist/mdc.theme.min.css';
-
 export { default as Button } from './Button';
 export { Card, CardHeader, CardTitle, CardSubtitle, CardText, CardActions, CardMedia } from './Card';
 export { default as Elevation } from './Elevation';

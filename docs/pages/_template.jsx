@@ -19,6 +19,7 @@ import Layout from 'components/Layout';
 import Content from 'components/Content';
 
 // Import styles.
+import '../../node_modules/material-components-web/dist/material-components-web.css';
 import 'prismjs/themes/prism-okaidia.css'
 import 'css/main.css'
 
@@ -32,7 +33,7 @@ module.exports = React.createClass({
   },
   render () {
     const isIntroductionActive = this.props.location.pathname===prefixLink('/');
-    const isCustomizeActive = this.props.location.pathname===prefixLink('/customize/');
+    const isThemingActive = this.props.location.pathname===prefixLink('/theming/');
     const componentLinks = config.components.map(({name, path}) => { 
       const isActive = this.props.location.pathname===prefixLink(path);
       return (
@@ -81,10 +82,10 @@ module.exports = React.createClass({
                   {'Introduction'}
                 </Link>
                 <Link 
-                  to={prefixLink('/customize/')} 
-                  selected={ isCustomizeActive }
+                  to={prefixLink('/theming/')} 
+                  selected={ isThemingActive }
                 >
-                  {'Customize'}
+                  {'Theming'}
                 </Link>
               </Navigation>
               <ListDivider/>

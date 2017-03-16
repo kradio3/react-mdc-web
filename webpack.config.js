@@ -1,10 +1,13 @@
 const webpack = require('webpack');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    "react-mdc-web": "./src/index.js",
+    "react-mdc-web.defaultTheme": "./src/defaultTheme.js",
+  },
   output: {
     path: "out",
-    filename: "react-mdc-web.js",
+    filename: "[name].js",
     library: "ReactMdcWeb",
     libraryTarget: "umd",
   },

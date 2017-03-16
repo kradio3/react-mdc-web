@@ -18,7 +18,6 @@ description: "Material Design Components for React"
   ```html
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   ```
-
 ### Usage
 * ##### Bundlers
   Import 'react-mdc-web', if you are using bundler, such as webpack or Browserify
