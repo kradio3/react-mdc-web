@@ -1,21 +1,26 @@
 import React, { PropTypes } from 'react';
+import classnames from 'classnames';
 import Label from './Label';
-import Span from './Span';
 import Input from './Input';
+
+const ROOT = 'mdc-textfield';
+const DISABLED = `${ROOT}--disabled`;
+const FOCUSED = `${ROOT}--focused`;
+const INVALID = `${ROOT}--invalid`;
+const UPGRADED = `${ROOT}--upgraded`;
 
 class Textfield extends React.PureComponent {
 
   static propTypes = {
     disabled: PropTypes.bool,
     floatingLabel: PropTypes.string,
-    value: PropTypes.string,
+    id: PropTypes.string,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }
 
   constructor(props) {
     super(props);
     this.state = { };
-    this.onFocus = this.onFocus.bind(this);
-    this.onBlur = this.onBlur.bind(this);
   }
 
   onFocus() {
@@ -29,27 +34,32 @@ class Textfield extends React.PureComponent {
 
   render() {
     const { focus, invalid } = this.state;
-    const { floatingLabel, disabled, value, ...otherProps } = this.props;
+    const { floatingLabel, disabled, id, value, ...otherProps } = this.props;
+    const customId = id || `textfield-${floatingLabel.replace(/[^a-z0-9]/gi, '')}`;
     return (
-      <Label
-        disabled={disabled}
-        focused={focus}
-        invalid={invalid}
+      <div
+        className={classnames(ROOT, {
+          [FOCUSED]: focus,
+          [DISABLED]: disabled,
+          [INVALID]: invalid,
+        }, UPGRADED)}
       >
         <Input
+          id={customId}
           disabled={disabled}
-          onBlur={this.onBlur}
-          onFocus={this.onFocus}
+          onBlur={(event) => { this.onBlur(event); }}
+          onFocus={() => { this.onFocus(); }}
           value={value}
           {...otherProps}
         />
-        <Span
+        <Label
+          id={customId}
           focused={focus}
           value={value}
         >
           {floatingLabel}
-        </Span>
-      </Label>
+        </Label>
+      </div>
     );
   }
 }
