@@ -1,19 +1,18 @@
 import React, { PropTypes } from 'react';
-import classnames from 'classnames';
 import Label from './Label';
 import Input from './Input';
-
-const ROOT = 'mdc-textfield';
-const DISABLED = `${ROOT}--disabled`;
-const FOCUSED = `${ROOT}--focused`;
-const INVALID = `${ROOT}--invalid`;
-const UPGRADED = `${ROOT}--upgraded`;
+import Field from './Field';
+import Helptext from './Helptext';
 
 class Textfield extends React.PureComponent {
 
   static propTypes = {
+    className: PropTypes.string,
     disabled: PropTypes.bool,
     floatingLabel: PropTypes.string,
+    helptext: PropTypes.string,
+    helptextPersistent: PropTypes.bool,
+    helptextValidation: PropTypes.bool,
     id: PropTypes.string,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }
@@ -32,17 +31,27 @@ class Textfield extends React.PureComponent {
     this.setState({ focus: false, invalid });
   }
 
-  render() {
+  renderField() {
     const { focus, invalid } = this.state;
-    const { floatingLabel, disabled, id, value, ...otherProps } = this.props;
-    const customId = id || `textfield-${floatingLabel.replace(/[^a-z0-9]/gi, '')}`;
+    const {
+      className,
+      disabled,
+      floatingLabel,
+      helptext, // eslint-disable-line no-unused-vars
+      helptextPersistent, // eslint-disable-line no-unused-vars
+      helptextValidation, // eslint-disable-line no-unused-vars
+      id,
+      value,
+      ...otherProps
+    } = this.props;
+    const label = floatingLabel || '';
+    const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
     return (
-      <div
-        className={classnames(ROOT, {
-          [FOCUSED]: focus,
-          [DISABLED]: disabled,
-          [INVALID]: invalid,
-        }, UPGRADED)}
+      <Field
+        className={className}
+        focused={focus}
+        disabled={disabled}
+        invalid={invalid}
       >
         <Input
           id={customId}
@@ -59,8 +68,38 @@ class Textfield extends React.PureComponent {
         >
           {floatingLabel}
         </Label>
-      </div>
+      </Field>
     );
+  }
+
+  renderHelptext() {
+    const { focus, invalid } = this.state;
+    const { helptext, helptextPersistent, helptextValidation } = this.props;
+    return (
+      <Helptext
+        focused={focus}
+        invalid={invalid}
+        helptextPersistent={helptextPersistent}
+        helptextValidation={helptextValidation}
+      >
+        { helptext }
+      </Helptext>
+    );
+  }
+
+  render() {
+    const field = this.renderField();
+
+    if (this.props.helptext) {
+      return (
+        <div>
+          {field}
+          {this.renderHelptext()}
+        </div>
+      );
+    }
+
+    return field;
   }
 }
 export default Textfield;

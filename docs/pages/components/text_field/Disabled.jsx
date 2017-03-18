@@ -11,7 +11,7 @@ class Disabled extends React.PureComponent {
   render () {
     return (
       <Textfield
-        floatingLabel="City"
+        floatingLabel="Disabled field"
         disabled
         value={this.state.city}
         onChange={({target : {value : city}}) => {
