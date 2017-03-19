@@ -14,10 +14,7 @@ simple
 >
   Show dialog
 </Button>
-<Dialog
-  open={this.state.isOpen}
-  onClose={()=> { this.setState({isOpen: false}) }}
->
+<Dialog open={this.state.isOpen}>
   <DialogHeader>
     <DialogTitle>Use Google's location service?</DialogTitle>
   </DialogHeader>
@@ -42,10 +39,7 @@ scrollable
 >
   Show scrollable dialog
 </Button>
-<Dialog
-  open={this.state.isOpen}
-  onClose={()=> { this.setState({isOpen: false}) }}
->
+<Dialog open={this.state.isOpen}>
   <DialogHeader>
     <DialogTitle>Choose a Ringtone</DialogTitle>
   </DialogHeader>

@@ -25,10 +25,7 @@ class Standard extends React.PureComponent {
         >
           Show dialog
         </Button>
-        <Dialog
-          open={this.state.isOpen}
-          onClose={()=> { this.setState({isOpen: false}) }}
-        >
+        <Dialog open={this.state.isOpen}>
           <DialogHeader>
             <DialogTitle>Choose a Ringtone</DialogTitle>
           </DialogHeader>

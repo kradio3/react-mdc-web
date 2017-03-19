@@ -8,25 +8,11 @@ class Dialog extends Component {
     className: PropTypes.string,
     children: PropTypes.node,
     open: PropTypes.bool,
-    onClose: PropTypes.func,
-  }
-
-  constructor(props) {
-    super(props);
-    this.close = this.close.bind(this);
-    this.state = {};
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.open) document.body.classList.add(SCROLL_LOCK);
     else document.body.classList.remove(SCROLL_LOCK);
-  }
-
-  close() {
-    const { onClose } = this.props;
-    if (typeof onClose === 'function') {
-      onClose();
-    }
   }
 
   render() {
