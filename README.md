@@ -61,6 +61,7 @@ More samples could be found on the [Documentation Site](https://kradio3.github.i
 
 ## License
 MIT, see [LICENSE](/LICENSE) for details
+
 [status-image]: https://img.shields.io/badge/status-maintained-brightgreen.svg
 [status-url]: https://github.com/kradio3/react-mdc-web
 
