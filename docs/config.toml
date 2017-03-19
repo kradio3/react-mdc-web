@@ -12,6 +12,9 @@ linkPrefix = "/react-mdc-web"
   name = "Checkbox"
   path = "/components/checkbox/"
 [[components]]
+  name = "Dialog"
+  path = "/components/dialog/"
+[[components]]
   name = "Drawer"
   path = "/components/drawer/"
 [[components]]

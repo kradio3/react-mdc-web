@@ -6,7 +6,7 @@ import { colors, activeColors } from 'utils/colors'
 
 import typography from 'utils/typography'
 import { config } from 'config'
-import { 
+import {
   Drawer,
   DrawerSpacer,
   Navigation,
@@ -21,6 +21,7 @@ import Content from 'components/Content';
 // Import styles.
 import '../../node_modules/material-components-web/dist/material-components-web.css';
 import 'prismjs/themes/prism-okaidia.css'
+import 'css/mdc.dialog.min.css'
 import 'css/main.css'
 
 const { rhythm, adjustFontSizeTo } = typography
@@ -34,12 +35,12 @@ module.exports = React.createClass({
   render () {
     const isIntroductionActive = this.props.location.pathname===prefixLink('/');
     const isThemingActive = this.props.location.pathname===prefixLink('/theming/');
-    const componentLinks = config.components.map(({name, path}) => { 
+    const componentLinks = config.components.map(({name, path}) => {
       const isActive = this.props.location.pathname===prefixLink(path);
       return (
-      <Link 
+      <Link
         key={name}
-        to={prefixLink(path)} 
+        to={prefixLink(path)}
         selected={ isActive }
       >
         {name}
@@ -69,20 +70,20 @@ module.exports = React.createClass({
           </a>
         </Toolbar>
         <Content>
-          <Drawer 
-            permanent 
+          <Drawer
+            permanent
             style={{height: 'inherit', minHeight: '100%'}}
           >
             <ListGroup>
               <Navigation>
-                <Link 
-                  to={prefixLink('/')} 
+                <Link
+                  to={prefixLink('/')}
                   selected={ isIntroductionActive }
                 >
                   {'Introduction'}
                 </Link>
-                <Link 
-                  to={prefixLink('/theming/')} 
+                <Link
+                  to={prefixLink('/theming/')}
                   selected={ isThemingActive }
                 >
                   {'Theming'}
