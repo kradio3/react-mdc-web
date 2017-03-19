@@ -50,19 +50,19 @@ scrollable
     <DialogTitle>Choose a Ringtone</DialogTitle>
   </DialogHeader>
   <DialogBody scrollable>
-    <ul class="mdc-list">
-      <li class="mdc-list-item">None</li>
-      <li class="mdc-list-item">Callisto</li>
-      <li class="mdc-list-item">Ganymede</li>
-      <li class="mdc-list-item">Luna</li>
-      <li class="mdc-list-item">Marimba</li>
-      <li class="mdc-list-item">Schwifty</li>
-      <li class="mdc-list-item">Callisto</li>
-      <li class="mdc-list-item">Ganymede</li>
-      <li class="mdc-list-item">Luna</li>
-      <li class="mdc-list-item">Marimba</li>
-      <li class="mdc-list-item">Schwifty</li>
-    </ul>
+    <List>
+      <ListItem>None</ListItem>
+      <ListItem>Callisto</ListItem>
+      <ListItem>Ganymede</ListItem>
+      <ListItem>Luna</ListItem>
+      <ListItem>Marimba</ListItem>
+      <ListItem>Schwifty</ListItem>
+      <ListItem>Callisto</ListItem>
+      <ListItem>Ganymede</ListItem>
+      <ListItem>Luna</ListItem>
+      <ListItem>Marimba</ListItem>
+      <ListItem>Schwifty</ListItem>
+    </List>
   </DialogBody>
   <DialogFooter>
     <Button compact onClick={()=> { this.setState({isOpen: false}) }}>Cancel</Button>
