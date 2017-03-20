@@ -14,6 +14,7 @@ class Textfield extends React.PureComponent {
     helptextPersistent: PropTypes.bool,
     helptextValidation: PropTypes.bool,
     id: PropTypes.string,
+    required: PropTypes.bool,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }
 

@@ -1,35 +1,44 @@
 ---
 title: "Text Field"
 ---
-
-Text field with floating label
 ```react-snippet
 text-field-label
 ```
 
 ```jsx
-<Textfield
-  floatingLabel="City"
-  value={this.state.city}
-  onChange={({target : {value : city}}) => {
+<Cell col={4}>
+  <Textfield
+    floatingLabel="City"
+    value={this.state.city}
+    onChange={({target : {value : city}}) => {
       this.setState({ city })
     }}
-/>
-```
-Disabled field
-```react-snippet
-text-field-disabled
-```
+  />
+</Cell>
 
-```jsx
-<Textfield
-  disabled
-  floatingLabel="Disabled field"
-  value={this.state.city}
-  onChange={({target : {value : city}}) => {
-      this.setState({ city })
+{/* Disabled field */}
+<Cell col={4}>
+  <Textfield
+    disabled
+    floatingLabel="State"
+    value={this.state.state}
+    onChange={({target : {value : state}}) => {
+      this.setState({ state })
     }}
-/>
+  />
+</Cell>
+
+{/* Required field */}
+<Cell col={4}>
+  <Textfield
+    floatingLabel="Zip"
+    required
+    value={this.state.zip}
+    onChange={({target : {value : zip}}) => {
+      this.setState({ zip })
+    }}
+  />
+</Cell>
 ```
 
 ### Help text

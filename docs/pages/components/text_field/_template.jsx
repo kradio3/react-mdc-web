@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
 import FloatingLabel from './FloatingLabel'
-import Disabled from './Disabled'
 import Helptext from './Helptext'
 import HelptextPersistent from './HelptextPersistent'
 import HelptextValidation from './HelptextValidation'
@@ -16,9 +15,6 @@ class Template extends React.PureComponent {
     const floating = document.getElementById("text-field-label");
     ReactDOM.render(<FloatingLabel/>, floating);
 
-    const disabled = document.getElementById("text-field-disabled");
-    ReactDOM.render(<Disabled/>, disabled);
-
     const helptext = document.getElementById("text-field-helptext");
     ReactDOM.render(<Helptext/>, helptext);
 
@@ -27,6 +23,7 @@ class Template extends React.PureComponent {
 
     const helptextValidation = document.getElementById("text-field-validation");
     ReactDOM.render(<HelptextValidation/>, helptextValidation);
+
   } 
 
   render () {

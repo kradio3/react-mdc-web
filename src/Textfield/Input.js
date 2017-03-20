@@ -1,20 +1,12 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 
 const ROOT = 'mdc-textfield__input';
-const propTypes = {
-  disabled: PropTypes.bool,
-  id: PropTypes.string,
-};
 
-const Input = ({ disabled, id, ...otherProps }) => (
+const Input = ({ ...props }) => (
   <input
     className={classnames(ROOT)}
-    disabled={disabled}
-    type="text"
-    id={id}
-    {...otherProps}
+    {...props}
   />
 );
-Input.propTypes = propTypes;
 export default Input;

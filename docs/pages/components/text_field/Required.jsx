@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react'
 import Textfield from '../../../../src/Textfield/Textfield'
 
-class Default extends React.PureComponent {
+class Required extends React.PureComponent {
 
   constructor(props){
     super(props);
@@ -11,6 +11,8 @@ class Default extends React.PureComponent {
   render () {
     return (
       <Textfield
+        floatingLabel="Required field"
+        required
         value={this.state.city}
         onChange={({target : {value : city}}) => {
           this.setState({ city })
@@ -19,4 +21,4 @@ class Default extends React.PureComponent {
     )
   }
 }
-export default Default;
+export default Required;
