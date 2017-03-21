@@ -19,11 +19,14 @@ class Standard extends React.PureComponent {
         <Button
           primary
           raised
-          onClick={()=> { this.setState({isOpen: !this.state.isOpen}) }}
+          onClick={()=> { this.setState({isOpen: true}) }}
         >
           Show dialog
         </Button>
-        <Dialog open={this.state.isOpen}>
+        <Dialog 
+          open={this.state.isOpen}
+          onClose={() => {this.setState({isOpen:false})}}
+        >
           <DialogHeader>
             <DialogTitle>Use Google's location service?</DialogTitle>
           </DialogHeader>

@@ -12,7 +12,7 @@ const DialogFooter = ({ className, children }) => {
   const actions = React.Children.map(children, (action, index) => {
     const isLastAction = last === index;
     const actionClasses = action.props.className;
-    const classes = classnames(actionClasses, 'mdc-button', FOOTER_BUTTON, {
+    const classes = classnames(actionClasses, FOOTER_BUTTON, {
       [FOOTER_BUTTON_CANCEL]: !isLastAction,
       [FOOTER_BUTTON_ACCEPT]: isLastAction,
     });

@@ -8,11 +8,11 @@ const propTypes = {
 };
 
 const DialogTitle = ({ className, children }) => (
-  <h1
+  <h2
     className={classnames(HEADER_TITLE, className)}
   >
     {children}
-  </h1>
+  </h2>
   );
 DialogTitle.propTypes = propTypes;
 export default DialogTitle;
