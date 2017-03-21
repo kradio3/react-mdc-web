@@ -1,5 +1,6 @@
 export { default as Button } from './Button';
 export { Card, CardHeader, CardTitle, CardSubtitle, CardText, CardActions, CardMedia } from './Card';
+export { Dialog, DialogHeader, DialogTitle, DialogBody, DialogFooter } from './Dialog';
 export { default as Elevation } from './Elevation';
 export { default as Fab } from './Fab';
 export { List, ListItem, ListDivider, ListGroup, ListHeader } from './List';
