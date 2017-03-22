@@ -1,3 +1,26 @@
+<a name="0.9.0"></a>
+# [0.9.0](https://github.com/kradio3/react-mdc-web/compare/v0.8.0...v0.9.0) (2017-03-22)
+
+
+### Code Refactoring
+
+* **components:** remove default css imports (#5) ([1c15d67](https://github.com/kradio3/react-mdc-web/commit/1c15d67))
+
+
+### Features
+
+* **Dialog:** add new Dialog component (#8) ([250cad6](https://github.com/kradio3/react-mdc-web/commit/250cad6))
+* **ListHeader:** create new component ([f40347a](https://github.com/kradio3/react-mdc-web/commit/f40347a))
+* **Textfield:** support helptext ([fddaf31](https://github.com/kradio3/react-mdc-web/commit/fddaf31))
+* **Textfield:** support required property ([4bf091d](https://github.com/kradio3/react-mdc-web/commit/4bf091d))
+
+
+### BREAKING CHANGES
+
+* components: Default CSS is not included into components anymore
+
+
+
 <a name="0.8.0"></a>
 # [0.8.0](https://github.com/kradio3/react-mdc-web/compare/v0.7.1...v0.8.0) (2017-03-13)
 
