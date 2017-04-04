@@ -55,7 +55,8 @@
     "pretest": "npm run lint",
     "test": "echo \"TODO tests\"",
     "clean": "rm -rf lib",
-    "compile": "babel src --ignore __tests__ --out-dir lib",
+    "compile-vendors": "mkdir -p lib/Menu && babel node_modules/@material/menu/util.js -o lib/Menu/util.js",
+    "compile": "npm run compile-vendors && babel src --ignore __tests__ --out-dir lib",
     "docs:develop": "cd docs && ./node_modules/.bin/gatsby develop",
     "docs:build": "cd docs && NODE_ENV=production ./node_modules/.bin/gatsby build --prefix-links",
     "docs:deploy": "cd docs && ./node_modules/.bin/gh-pages -d public",
@@ -67,6 +68,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "material-components-web": "^0.7.0"
+    "material-components-web": "^0.8.0"
   }
 }
