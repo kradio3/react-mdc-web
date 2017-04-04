@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
-import isDefined from '../utils/isDefined';
 
 const propTypes = {
   className: PropTypes.string,
