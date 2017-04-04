@@ -8,9 +8,11 @@ normal-toolbar
 ```
 ```jsx
 <Toolbar>
-  <ToolbarSection align="start">
-    <ToolbarTitle>Title</ToolbarTitle>
-  </ToolbarSection>
+  <ToolbarRow>
+    <ToolbarSection align="start">
+      <ToolbarTitle>Title</ToolbarTitle>
+    </ToolbarSection>
+  </ToolbarRow>
 </Toolbar>
 ```
 
@@ -20,9 +22,11 @@ fixed-toolbar
 ```
 ```jsx
 <Toolbar fixed>
-  <ToolbarSection align="start">
-    <ToolbarTitle>Title</ToolbarTitle>
-  </ToolbarSection>
+  <ToolbarRow>
+    <ToolbarSection align="start">
+      <ToolbarTitle>Title</ToolbarTitle>
+    </ToolbarSection>
+  </ToolbarRow>
 </Toolbar>
 
 {/* Adjust top margin for fixed toolbar */}
@@ -44,13 +48,15 @@ sections
 ``` ToolbarSection ``` could be aligned at start, at center and at end of toolbar
 ```jsx
 <Toolbar>
-  <ToolbarSection align="start">
-    Start
-  </ToolbarSection>
-  <ToolbarSection>
-    Center
-  </ToolbarSection>
-   <ToolbarSection align="end">
-    End
-  </ToolbarSection>
+  <ToolbarRow>
+    <ToolbarSection align="start">
+      Start
+    </ToolbarSection>
+    <ToolbarSection>
+      Center
+    </ToolbarSection>
+     <ToolbarSection align="end">
+      End
+    </ToolbarSection>
+  </ToolbarRow>
 </Toolbar>
