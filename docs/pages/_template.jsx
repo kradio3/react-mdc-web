@@ -24,8 +24,6 @@ import 'prismjs/themes/prism-okaidia.css'
 import 'css/mdc.dialog.min.css'
 import 'css/main.css'
 
-const { rhythm, adjustFontSizeTo } = typography
-
 module.exports = React.createClass({
   propTypes () {
     return {
@@ -38,37 +36,20 @@ module.exports = React.createClass({
     const componentLinks = config.components.map(({name, path}) => {
       const isActive = this.props.location.pathname===prefixLink(path);
       return (
-      <Link
-        key={name}
-        to={prefixLink(path)}
-        selected={ isActive }
-      >
-        {name}
-      </Link>
-    ) });
+        <Link
+          key={name}
+          to={prefixLink(path)}
+          selected={ isActive }
+        >
+          {name}
+        </Link>
+      ) });
 
     return (
       <Layout>
-        <Toolbar>
-          <Link
-            to={prefixLink('/')}
-            style={{ color: colors.fg }}
-            className="mdc-typography--title site-title"
-          >
-            {config.siteTitle}
-          </Link>
-          <a
-            style={{
-              float: 'right',
-              color: colors.fg,
-              textDecoration: 'none',
-              marginLeft: rhythm(1/2),
-            }}
-            href="https://github.com/kradio3/react-mdc-web"
-          >
-            Github
-          </a>
-        </Toolbar>
+        <Toolbar 
+          title={config.siteTitle}
+        />
         <Content>
           <Drawer
             permanent
