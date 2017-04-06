@@ -28,7 +28,7 @@ simple
     <Button compact onClick={()=> { this.setState({isOpen: false}) }}>Decline</Button>
     <Button compact onClick={()=> { this.setState({isOpen: false}) }}>Accept</Button>
   </DialogFooter>
-</Drawer>
+</Dialog>
 ```
 ### Scrollable dialog
 ```react-snippet
@@ -68,5 +68,5 @@ scrollable
     <Button compact onClick={()=> { this.setState({isOpen: false}) }}>Cancel</Button>
     <Button compact onClick={()=> { this.setState({isOpen: false}) }} >Accept</Button>
   </DialogFooter>
-</Drawer>
+</Dialog>
 ```
