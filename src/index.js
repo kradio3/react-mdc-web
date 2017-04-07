@@ -30,3 +30,4 @@ export {
   Body2,
   Body1,
 } from './Typography';
+export { GridList, Tile, TilePrimary, TileSecondary, TileContent, TileTitle, TileSupportText } from './GridList';
