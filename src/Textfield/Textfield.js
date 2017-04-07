@@ -14,6 +14,7 @@ class Textfield extends React.PureComponent {
     helptextPersistent: PropTypes.bool,
     helptextValidation: PropTypes.bool,
     id: PropTypes.string,
+    multiline: PropTypes.bool,
     required: PropTypes.bool,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }
@@ -42,7 +43,8 @@ class Textfield extends React.PureComponent {
       helptextPersistent, // eslint-disable-line no-unused-vars
       helptextValidation, // eslint-disable-line no-unused-vars
       id,
-      value,
+      multiline,
+      value, // eslint-disable-line no-unused-vars
       ...otherProps
     } = this.props;
     const label = floatingLabel || '';
@@ -50,21 +52,23 @@ class Textfield extends React.PureComponent {
     return (
       <Field
         className={className}
-        focused={focus}
         disabled={disabled}
+        focused={focus}
         invalid={invalid}
+        multiline={multiline}
       >
         <Input
-          id={customId}
           disabled={disabled}
+          id={customId}
+          multiline={multiline}
           onBlur={(event) => { this.onBlur(event); }}
           onFocus={() => { this.onFocus(); }}
           value={value}
           {...otherProps}
         />
         <Label
-          id={customId}
           focused={focus}
+          id={customId}
           value={value}
         >
           {floatingLabel}

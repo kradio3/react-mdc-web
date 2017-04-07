@@ -4,6 +4,7 @@ import FloatingLabel from './FloatingLabel'
 import Helptext from './Helptext'
 import HelptextPersistent from './HelptextPersistent'
 import HelptextValidation from './HelptextValidation'
+import Multiline from './Multiline'
 
 class Template extends React.PureComponent {
 
@@ -23,6 +24,9 @@ class Template extends React.PureComponent {
 
     const helptextValidation = document.getElementById("text-field-validation");
     ReactDOM.render(<HelptextValidation/>, helptextValidation);
+
+    const multiline = document.getElementById("text-field-multiline");
+    ReactDOM.render(<Multiline/>, multiline);
 
   } 
 

@@ -91,3 +91,20 @@ text-field-validation
   }}
 />
 ```
+
+### Multiline
+```react-snippet
+text-field-multiline
+```
+```jsx
+<Textfield
+  floatingLabel="Description"
+  multiline
+  rows="8"
+  cols="40"
+  value={this.state.description}
+  onChange={({target : {value : description}}) => {
+    this.setState({ description })
+  }}
+/>
+```
