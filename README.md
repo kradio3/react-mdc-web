@@ -1,7 +1,7 @@
 # [Material components for React](https://kradio3.github.io/react-mdc-web/)
 [![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Travis build][travis-image]][travis-url]
 
-React components based on styles from [Material Design Components Web project](https://github.com/material-components/material-components-web). Components are written in React.js. Doesn't use MDC JS sources.
+React components based on styles from [Material Design Components Web project](https://github.com/material-components/material-components-web). Components are written in React.js. Doesn't use MDC foundation classes.
 
 ## Installation
 From CDN
