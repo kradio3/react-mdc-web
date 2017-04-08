@@ -39,6 +39,7 @@
     "postcss-loader": "^1.2.1",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
+    "rimraf": "^2.6.1",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1"
@@ -54,7 +55,7 @@
     "lint": "eslint src/**",
     "pretest": "npm run lint",
     "test": "echo \"TODO tests\"",
-    "clean": "rm -rf lib",
+    "clean": "rimraf lib",
     "compile": "babel src --ignore __tests__ --out-dir lib",
     "docs:develop": "cd docs && ./node_modules/.bin/gatsby develop",
     "docs:build": "cd docs && NODE_ENV=production ./node_modules/.bin/gatsby build --prefix-links",
