@@ -51,8 +51,25 @@ module.exports = React.createClass({
             ga('create', 'UA-92225084-1', 'auto');
             ga('send', 'pageview');
             `}}/>
-        </body>
-      </html>
+
+          <script 
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html:`
+                {
+                  "@context": "http://schema.org",
+                  "@type": "SoftwareSourceCode",
+                  "name": "React-mdc-web",
+                  "url": "https://kradio3.github.io/react-mdc-web/",
+                  "isBasedOn": ["react", "material-components-web"],
+                  "codeRepository": "https://github.com/kradio3/react-mdc-web",
+                  "programmingLanguage": ["es6", "jsx"],
+                  "about": "Set of material design components for React",
+                  "keywords": "react, material, design, components, web"
+              `}}
+
+            />
+          </body>
+        </html>
     )
   },
 })
