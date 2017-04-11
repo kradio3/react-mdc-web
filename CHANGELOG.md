@@ -1,3 +1,15 @@
+<a name="0.10.1"></a>
+## [0.10.1](https://github.com/kradio3/react-mdc-web/compare/v0.9.0...v0.10.1) (2017-04-11)
+
+
+### Features
+
+* **Menu:** create new component ([2b1cc3d](https://github.com/kradio3/react-mdc-web/commit/2b1cc3d))
+* **Textfield:** support multiline text (#17) ([ee9d5b1](https://github.com/kradio3/react-mdc-web/commit/ee9d5b1))
+* **Toolbar:** create ToolbarRow component (#16) ([6432354](https://github.com/kradio3/react-mdc-web/commit/6432354))
+
+
+
 <a name="0.9.0"></a>
 # [0.9.0](https://github.com/kradio3/react-mdc-web/compare/v0.8.0...v0.9.0) (2017-03-22)
 
