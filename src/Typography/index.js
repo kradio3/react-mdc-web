@@ -1,0 +1,12 @@
+export { default as Typography } from './Typography';
+export { default as Caption } from './Caption';
+export { default as Display4 } from './Display4';
+export { default as Display3 } from './Display3';
+export { default as Display2 } from './Display2';
+export { default as Display1 } from './Display1';
+export { default as Headline } from './Headline';
+export { default as Title } from './Title';
+export { default as Subheading2 } from './Subheading2';
+export { default as Subheading1 } from './Subheading1';
+export { default as Body2 } from './Body2';
+export { default as Body1 } from './Body1';

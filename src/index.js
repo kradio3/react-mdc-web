@@ -16,3 +16,17 @@ export { Toolbar, ToolbarSection, ToolbarTitle, ToolbarRow } from './Toolbar';
 export { default as Content } from './Content';
 export { Radio, RadioGroup } from './Radio';
 export { Menu, MenuItem, MenuDivider, MenuAnchor } from './Menu';
+export {
+  Typography,
+  Caption,
+  Display4,
+  Display3,
+  Display2,
+  Display1,
+  Headline,
+  Title,
+  Subheading2,
+  Subheading1,
+  Body2,
+  Body1,
+} from './Typography';
