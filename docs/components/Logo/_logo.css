@@ -1,0 +1,11 @@
+.toolbar-logo {
+  height: 36px;
+  margin-right: 16px;
+  align-self: center;
+  opacity: 0.94;
+}
+
+.toolbar-logo img{
+  height: auto;
+  width: 36px;
+}

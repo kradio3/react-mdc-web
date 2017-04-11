@@ -21,7 +21,6 @@ import Content from 'components/Content';
 // Import styles.
 import '../../node_modules/material-components-web/dist/material-components-web.css';
 import 'prismjs/themes/prism-okaidia.css'
-import 'css/mdc.dialog.min.css'
 import 'css/main.css'
 
 module.exports = React.createClass({

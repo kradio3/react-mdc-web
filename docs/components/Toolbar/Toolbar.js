@@ -4,6 +4,7 @@ import {Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle} from '../../../src/To
 import { colors, activeColors } from 'utils/colors'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
+import Logo from '../Logo';
 
 const propTypes = {
   className: PropTypes.string,
@@ -14,7 +15,7 @@ const AppToolbar = ({ className, title, ...otherProps }) => (
   <Toolbar
     fixed
     style = {{
-      paddingLeft: '72px',
+      paddingLeft: '16px',
       zIndex: 2,
     }}
   >
@@ -22,6 +23,7 @@ const AppToolbar = ({ className, title, ...otherProps }) => (
       <ToolbarSection 
         align="start"
       >
+        <Logo/>
         <ToolbarTitle>
           <Link
             to={prefixLink('/')}

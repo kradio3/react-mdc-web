@@ -3,6 +3,9 @@ import React, { PropTypes } from 'react';
 let transformPropertyName;
 
 const getTransformPropertyName = () => {
+  if (typeof document === 'undefined') {
+    return 'transform';
+  }
   if (!transformPropertyName) {
     const el = document.createElement('div');
     transformPropertyName = ('transform' in el.style) ? 'transform' : '-webkit-transform';
