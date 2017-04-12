@@ -47,3 +47,6 @@ linkPrefix = "/react-mdc-web"
 [[components]]
   name = "Toolbar"
   path = "/components/toolbar/"
+[[components]]
+  name = "Typography"
+  path = "/components/typography/"
