@@ -65,6 +65,7 @@ module.exports = React.createClass({
                   "programmingLanguage": ["es6", "jsx"],
                   "about": "Set of material design components for React",
                   "keywords": "react, material, design, components, web"
+                }
               `}}
 
             />
