@@ -27,6 +27,9 @@ linkPrefix = "/react-mdc-web"
   name = "Grid"
   path = "/components/grid/"
 [[components]]
+  name = "Grid List"
+  path = "/components/grid_list/"
+[[components]]
   name = "Icon Toggle"
   path = "/components/icon_toggle/"
 [[components]]
