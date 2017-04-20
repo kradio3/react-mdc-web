@@ -1,3 +1,18 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="0.11.0"></a>
+# [0.11.0](https://github.com/kradio3/react-mdc-web/compare/v0.10.1...v0.11.0) (2017-04-20)
+
+
+### Features
+
+* **GridList:** create new component (#19) ([8284fa0](https://github.com/kradio3/react-mdc-web/commit/8284fa0))
+* **Typography:** create new component (#18) ([883ba46](https://github.com/kradio3/react-mdc-web/commit/883ba46))
+
+
+
 <a name="0.10.1"></a>
 ## [0.10.1](https://github.com/kradio3/react-mdc-web/compare/v0.9.0...v0.10.1) (2017-04-11)
 
@@ -140,6 +155,3 @@
 * **Textfield:** check validity ([e51e758](https://github.com/kradio3/react-mdc-web/commit/e51e758))
 * **Textfield:** create new component ([d7abdc2](https://github.com/kradio3/react-mdc-web/commit/d7abdc2))
 * **TextField:** handle onChange event ([f153cf0](https://github.com/kradio3/react-mdc-web/commit/f153cf0))
-
-
-
