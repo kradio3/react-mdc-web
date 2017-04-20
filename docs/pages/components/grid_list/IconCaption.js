@@ -9,14 +9,15 @@ import {
   TileSupportText,
 }from '../../../../src/GridList'
 import Icon from '../../../../src/Icon'
+import cardBg from './card_bg.jpg'
 
 class IconCaption extends React.PureComponent {
 
-  renderTiles(){
+  renderTile(key){
     const tile = (
-      <Tile>
+      <Tile key={key}>
         <TilePrimary>
-          <TileContent src= "card_bg.jpg"/>
+          <TileContent src={cardBg}/>
         </TilePrimary>
         <TileSecondary>
           <Icon name="star_border"/>
@@ -25,10 +26,14 @@ class IconCaption extends React.PureComponent {
         </TileSecondary>
       </Tile>
     );
+    return tile;
+  }
+
+  renderTiles(){
 
     let result = [];
     for(let i = 0; i< 3; i++) {
-      result.push(tile);
+      result.push(this.renderTile(i));
     }
     return result;
   }
