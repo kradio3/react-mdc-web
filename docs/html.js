@@ -38,10 +38,6 @@ module.exports = React.createClass({
           <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700" rel="stylesheet"/>
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
           {css}
-        </head>
-        <body>
-          <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
           <script dangerouslySetInnerHTML={{ __html:`
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -52,6 +48,10 @@ module.exports = React.createClass({
             ga('send', 'pageview');
             `}}/>
 
+        </head>
+        <body>
+          <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+          <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
           <script 
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html:`
@@ -67,7 +67,6 @@ module.exports = React.createClass({
                   "keywords": "react, material, design, components, web"
                 }
               `}}
-
             />
           </body>
         </html>
