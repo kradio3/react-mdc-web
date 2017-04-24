@@ -31,3 +31,4 @@ export {
   Body1,
 } from './Typography';
 export { GridList, Tile, TilePrimary, TileSecondary, TileContent, TileTitle, TileSupportText } from './GridList';
+export { default as Switch } from './Switch';
