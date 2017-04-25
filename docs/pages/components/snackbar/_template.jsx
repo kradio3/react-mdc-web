@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Singleline from './Singleline'
-import SinglelineAction from './SinglelineAction'
-import SinglelineTimeout from './SinglelineTimeout'
-import Multiline from './Multiline'
-import MultilineBottomAction from './MultilineBottomAction'
+import Singleline from './_Singleline'
+import SinglelineAction from './_SinglelineAction'
+import SinglelineTimeout from './_SinglelineTimeout'
+import Multiline from './_Multiline'
+import MultilineBottomAction from './_MultilineBottomAction'
 
 class Template extends React.PureComponent {
 

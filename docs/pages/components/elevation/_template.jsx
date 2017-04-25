@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Default from './Default'
+import Default from './_Default'
 
 class Template extends React.PureComponent {
 

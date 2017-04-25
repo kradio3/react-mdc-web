@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Permanent from './Permanent'
-import Temporary from './Temporary'
+import Permanent from './_Permanent'
+import Temporary from './_Temporary'
 
 class Template extends React.PureComponent {
 

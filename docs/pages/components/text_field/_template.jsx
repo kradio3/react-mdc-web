@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import FloatingLabel from './FloatingLabel'
-import Helptext from './Helptext'
-import HelptextPersistent from './HelptextPersistent'
-import HelptextValidation from './HelptextValidation'
-import Multiline from './Multiline'
+import FloatingLabel from './_FloatingLabel'
+import Helptext from './_Helptext'
+import HelptextPersistent from './_HelptextPersistent'
+import HelptextValidation from './_HelptextValidation'
+import Multiline from './_Multiline'
 
 class Template extends React.PureComponent {
 

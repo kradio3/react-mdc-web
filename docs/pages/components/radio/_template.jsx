@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Simple from './Simple'
-import Labeled from './Labeled'
-import Group from './Group'
+import Simple from './_Simple'
+import Labeled from './_Labeled'
+import Group from './_Group'
 
 class Template extends React.PureComponent {
 

@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Default from './Default'
-import Indeterminate from './Indeterminate'
-import Labeled from './Labeled'
+import Default from './_Default'
+import Indeterminate from './_Indeterminate'
+import Labeled from './_Labeled'
 
 class Template extends React.PureComponent {
 

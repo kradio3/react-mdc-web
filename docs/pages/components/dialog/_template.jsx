@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Standard from './Standard'
-import Scrollable from './Scrollable'
+import Standard from './_Standard'
+import Scrollable from './_Scrollable'
 
 class Template extends React.PureComponent {
 

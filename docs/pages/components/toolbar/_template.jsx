@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Normal from './Normal'
-import Fixed from './Fixed'
-import Sections from './Sections'
+import Normal from './_Normal'
+import Fixed from './_Fixed'
+import Sections from './_Sections'
 
 class Template extends React.PureComponent {
 

@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Default from './Default'
-import Bottom from './Bottom'
+import Default from './_Default'
+import Bottom from './_Bottom'
 
 class Template extends React.PureComponent {
 

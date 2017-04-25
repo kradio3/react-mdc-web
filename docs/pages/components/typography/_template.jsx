@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Default from './Default'
-import ChangeComponent from './ChangeComponent'
-import AdjustMargin from './AdjustMargin'
+import Default from './_Default'
+import ChangeComponent from './_ChangeComponent'
+import AdjustMargin from './_AdjustMargin'
 
 class Template extends React.PureComponent {
 

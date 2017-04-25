@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Default from './Default'
-import TwoLineCaption from './TwoLineCaption'
-import IconCaption from './IconCaption'
+import Default from './_Default'
+import TwoLineCaption from './_TwoLineCaption'
+import IconCaption from './_IconCaption'
 
 class Template extends React.PureComponent {
 

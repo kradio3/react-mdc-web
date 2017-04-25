@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
 import Button from '../../../../src/Button/Button'
-import Counter from './Counter';
+import Counter from './_Counter';
 
 class Buttons extends React.PureComponent {
 

@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react'
 import ReactDOM from 'react-dom'
-import Default from './Default'
-import Disabled from './Disabled'
+import Default from './_Default'
+import Disabled from './_Disabled'
 
 class Template extends React.PureComponent {
 
