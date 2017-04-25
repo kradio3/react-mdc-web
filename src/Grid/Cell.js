@@ -4,7 +4,6 @@ import isDefined from '../utils/isDefined';
 
 const propTypes = {
   align: PropTypes.oneOf(['top', 'middle', 'bottom']),
-  children: PropTypes.node,
   className: PropTypes.string,
   col: PropTypes.number,
   order: PropTypes.number,
@@ -16,7 +15,6 @@ const ROOT = 'mdc-layout-grid__cell';
 
 const Cell = ({
   align,
-  children,
   className,
   col,
   order,
@@ -33,9 +31,7 @@ const Cell = ({
       [`${ROOT}--align-${align}`]: isDefined(align),
     }, className)}
     {...otherProps}
-  >
-    {children}
-  </div>
+  />
 );
 Cell.propTypes = propTypes;
 export default Cell;
