@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import startDetail from '../List/startDetail';
+import detail from '../List/detail';
 
 const navigationItem = (component, isTemporary) => {
   const {
@@ -14,7 +14,7 @@ const navigationItem = (component, isTemporary) => {
   }, className);
 
   const childs = React.Children.map(children, child =>
-      startDetail(child),
+      detail(child),
     );
 
   return React.cloneElement(component, { className: classes, children: childs });
