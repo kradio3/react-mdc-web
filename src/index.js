@@ -3,7 +3,7 @@ export { Card, CardHeader, CardTitle, CardSubtitle, CardText, CardActions, CardM
 export { Dialog, DialogHeader, DialogTitle, DialogBody, DialogFooter } from './Dialog';
 export { default as Elevation } from './Elevation';
 export { default as Fab } from './Fab';
-export { List, ListItem, ListDivider, ListGroup, ListHeader } from './List';
+export { List, ListItem, ListDivider, ListGroup, ListHeader, ListItemText, ListItemTextSecondary } from './List';
 export { default as Textfield } from './Textfield';
 export { default as Checkbox } from './Checkbox';
 export { default as FormField } from './FormField';
