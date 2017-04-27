@@ -4,6 +4,7 @@ import Default from './_Default'
 import Detail from './_Detail'
 import Divider from './_Divider'
 import Group from './_Group'
+import TwoLines from './_TwoLines'
 
 class Template extends React.PureComponent {
 
@@ -26,6 +27,9 @@ class Template extends React.PureComponent {
 
     const group = document.getElementById("list-group");
     ReactDOM.render(<Group/>, group);
+
+    const twoLines = document.getElementById("list-two-lines");
+    ReactDOM.render(<TwoLines/>, twoLines);
   } 
 
   render () {

@@ -14,6 +14,22 @@ list-text-only
   <ListItem>Buenos Aires, Argentina</ListItem>
 </List>
 ```
+
+### Two lines
+```react-snippet
+list-two-lines
+```
+```jsx
+<List>
+  <ListItem>
+    <ListItemText>
+      Berlin
+      <ListItemTextSecondary> Germany </ListItemTextSecondary>
+    </ListItemText>
+  </ListItem>
+{/* ... */}
+```
+
 ### Dense
 ```react-snippet
 list-dense
