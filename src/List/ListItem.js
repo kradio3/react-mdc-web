@@ -1,4 +1,5 @@
-import React, { PropTypes, Children } from 'react';
+import PropTypes from 'prop-types';
+import React, { Children } from 'react';
 import classnames from 'classnames';
 import detail from '../List/detail';
 

@@ -1,4 +1,5 @@
-import React, { PropTypes, PureComponent, Children, cloneElement } from 'react';
+import PropTypes from 'prop-types';
+import React, { PureComponent, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 
 const ROOT = 'mdc-grid-list';

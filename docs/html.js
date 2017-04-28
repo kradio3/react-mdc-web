@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 
@@ -10,7 +11,7 @@ const BUILD_TIME = new Date().getTime()
 module.exports = React.createClass({
   displayName: 'HTML',
   propTypes: {
-    body: React.PropTypes.string,
+    body: PropTypes.string,
   },
   render () {
     const title = DocumentTitle.rewind()

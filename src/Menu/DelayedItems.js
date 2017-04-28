@@ -1,4 +1,5 @@
-import React, { PropTypes, Children, cloneElement } from 'react';
+import PropTypes from 'prop-types';
+import React, { Children, cloneElement } from 'react';
 import { TRANSITION_DURATION_MS, TRANSITION_SCALE_ADJUSTMENT_Y } from './constants';
 
 const DelayedItems = WrappedComponent => class extends React.PureComponent {

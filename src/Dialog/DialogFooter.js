@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import classnames from 'classnames';
 import { FOOTER, FOOTER_BUTTON, FOOTER_BUTTON_CANCEL, FOOTER_BUTTON_ACCEPT } from './constants';
 
