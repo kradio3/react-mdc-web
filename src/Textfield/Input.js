@@ -1,4 +1,5 @@
-import { PropTypes, createElement } from 'react';
+import PropTypes from 'prop-types';
+import { createElement } from 'react';
 
 const ROOT = 'mdc-textfield__input';
 const propTypes = {

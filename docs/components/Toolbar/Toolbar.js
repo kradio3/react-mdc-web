@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import classnames from 'classnames';
 import {Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle} from '../../../src/Toolbar';
 import { colors, activeColors } from 'utils/colors'

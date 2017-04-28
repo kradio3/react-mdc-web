@@ -1,4 +1,5 @@
-import React, { PropTypes, Children } from 'react';
+import PropTypes from 'prop-types';
+import React, { Children } from 'react';
 /* eslint-disable import/no-unresolved, import/extensions*/
 import { clamp } from './util';
 /* eslint-enable import/no-unresolved, import/extensions*/

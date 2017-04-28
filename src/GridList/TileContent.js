@@ -1,4 +1,5 @@
-import { PropTypes, createElement } from 'react';
+import PropTypes from 'prop-types';
+import { createElement } from 'react';
 import classnames from 'classnames';
 
 const propTypes = {

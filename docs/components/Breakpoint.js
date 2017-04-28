@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react'
 import './breakpoints.css'
 
@@ -22,8 +23,8 @@ class Breakpoint extends Component {
 }
 
 Breakpoint.propTypes = {
-  children: React.PropTypes.array,
-  mobile: React.PropTypes.bool,
+  children: PropTypes.array,
+  mobile: PropTypes.bool,
 }
 
 export default Breakpoint
