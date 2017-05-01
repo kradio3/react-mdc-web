@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.12.0"></a>
+# [0.12.0](https://github.com/kradio3/react-mdc-web/compare/v0.11.0...v0.12.0) (2017-05-01)
+
+
+### Bug Fixes
+
+* **Menu:** remove css import (#21) ([a69552c](https://github.com/kradio3/react-mdc-web/commit/a69552c))
+
+
+### Features
+
+* **List:** possibility to align detail items ([2e5bd3c](https://github.com/kradio3/react-mdc-web/commit/2e5bd3c))
+* **List:** support two lines of text in ListItem ([ff60ab5](https://github.com/kradio3/react-mdc-web/commit/ff60ab5))
+* **Switch:** create new component (#12) ([50884aa](https://github.com/kradio3/react-mdc-web/commit/50884aa))
+
+
+
 <a name="0.11.0"></a>
 # [0.11.0](https://github.com/kradio3/react-mdc-web/compare/v0.10.1...v0.11.0) (2017-04-20)
 
