@@ -38,7 +38,6 @@
     "fs-extra-promise": "^1.0.1",
     "node-sass": "^3.7.0",
     "postcss-loader": "^1.2.1",
-    "prop-types": "^15.5.8",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
     "rimraf": "^2.6.1",
@@ -71,6 +70,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "material-components-web": "^0.8.0"
+    "material-components-web": "^0.11.1",
+    "prop-types": "^15.5.10"
   }
 }
