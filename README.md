@@ -17,7 +17,7 @@ npm i --save react-mdc-web
 ### Default theme
 * Include CSS with default theme into HTML page
   ```html
-  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"> 
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@0.12.1/dist/material-components-web.min.css"> 
   ```
 * Or import it into JS/JSX file
   ```javascript
@@ -43,7 +43,7 @@ class MyComponent extends Component {
               Title goes here
             </CardTitle>
           </CardHeader>
-          <CardText> 
+          <CardText>
             Lorem ipsum dolor sit amet, sint adipiscing ius eu
           </CardText>
           <CardActions>
