@@ -40,7 +40,7 @@ a:visited {
 }
 
 a:hover {
-  text-decoration: underline;
+/*  text-decoration: underline; */
 }
 
 .demo-grid-1 .mdc-layout-grid__cell {

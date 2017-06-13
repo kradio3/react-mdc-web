@@ -33,6 +33,9 @@ linkPrefix = "/react-mdc-web"
   name = "Icon Toggle"
   path = "/components/icon_toggle/"
 [[components]]
+  name = "Linear progress"
+  path = "/components/linear_progress/"
+[[components]]
   name = "List"
   path = "/components/list/"
 [[components]]
@@ -47,6 +50,9 @@ linkPrefix = "/react-mdc-web"
 [[components]]
   name = "Switch"
   path = "/components/switch/"
+[[components]]
+  name = "Tabs"
+  path = "/components/tabs/"
 [[components]]
   name = "Text Field"
   path = "/components/text_field/"
