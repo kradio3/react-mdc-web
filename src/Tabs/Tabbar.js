@@ -15,7 +15,7 @@ const Tabbar = ({ className, children, ...otherProps }) => (
     {...otherProps}
   >
     {children}
-    <span className={`${ROOT}__indicator`}/>
+    <span className={`${ROOT}__indicator`} />
   </nav>
   );
 
