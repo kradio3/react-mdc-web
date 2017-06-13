@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import classnames from 'classnames';
 
 const propTypes = {
+  className: PropTypes.string,
   indeterminate: PropTypes.bool,
 };
 
-const Input = ({ indeterminate, ...otherProps }) => (
+const Input = ({ className, indeterminate, ...otherProps }) => (
   <input
-    className="mdc-checkbox__native-control"
+    className={classnames('mdc-checkbox__native-control', className)}
     type="checkbox"
     ref={(nativeComponent) => {
       if (nativeComponent) {
