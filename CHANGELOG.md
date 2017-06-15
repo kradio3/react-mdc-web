@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.13.0"></a>
+# [0.13.0](https://github.com/kradio3/react-mdc-web/compare/v0.12.2...v0.13.0) (2017-06-15)
+
+
+### Features
+
+* **Checkbox:** handle class names (#26) ([60e9e18](https://github.com/kradio3/react-mdc-web/commit/60e9e18))
+* **LinearProgress:** create new component (#25) ([287972b](https://github.com/kradio3/react-mdc-web/commit/287972b))
+* **Tabs:** create new component (#20) ([e8311e1](https://github.com/kradio3/react-mdc-web/commit/e8311e1))
+
+
+
 <a name="0.12.2"></a>
 ## [0.12.2](https://github.com/kradio3/react-mdc-web/compare/v0.12.0...v0.12.2) (2017-05-01)
 
