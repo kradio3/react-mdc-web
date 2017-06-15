@@ -20,12 +20,12 @@ const AppToolbar = ({ className, title, ...otherProps }) => (
       zIndex: 2,
     }}
   >
-    <ToolbarRow>
+    <ToolbarRow style={{paddingTop: "16px", paddingBottom: "16px"}}>
       <ToolbarSection 
         align="start"
       >
         <Logo/>
-        <ToolbarTitle>
+        <ToolbarTitle style={{lineHeight: "36px"}}>
           <Link
             to={prefixLink('/')}
             style={{ color: colors.fg }}
@@ -42,6 +42,7 @@ const AppToolbar = ({ className, title, ...otherProps }) => (
           style={{
             color: colors.fg,
             textDecoration: 'none',
+            lineHeight: '36px',
           }}
           href="https://github.com/kradio3/react-mdc-web"
         >
