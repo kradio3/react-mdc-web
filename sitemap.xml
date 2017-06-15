@@ -11,11 +11,13 @@
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/grid_list/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/grid/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/icon_toggle/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kradio3.github.io/react-mdc-web/components/linear_progress/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/list/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/menu/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/radio/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/snackbar/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/switch/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kradio3.github.io/react-mdc-web/components/tabs/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/text_field/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/toolbar/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://kradio3.github.io/react-mdc-web/components/typography/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
