@@ -5,11 +5,17 @@ import classnames from 'classnames';
 const propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
+  large: PropTypes.bool,
 };
 
-const CardTitle = ({ className, children }) => (
+const ROOT = 'mdc-card__title';
+const LARGE = `${ROOT}--large`;
+
+const CardTitle = ({ className, children, large }) => (
   <h1
-    className={classnames('mdc-card__title', 'mdc-card__title--large', className)}
+    className={classnames(ROOT, {
+      [LARGE]: large,
+    }, className)}
   >
     {children}
   </h1>
