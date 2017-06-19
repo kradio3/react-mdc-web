@@ -70,7 +70,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "material-components-web": "~0.12.1",
+    "material-components-web": "~0.13.0",
     "prop-types": "^15.5.10"
   }
 }

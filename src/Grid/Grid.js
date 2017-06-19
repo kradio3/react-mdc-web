@@ -12,9 +12,11 @@ const Grid = ({ className, children, ...otherProps }) => (
     className={classnames('mdc-layout-grid', className)}
     {...otherProps}
   >
-    {children}
+    <div className="mdc-layout-grid__inner">
+      {children}
+    </div>
   </div>
-  );
+);
 
 Grid.propTypes = propTypes;
 export default Grid;

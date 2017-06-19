@@ -17,10 +17,11 @@ const AppToolbar = ({ className, title, ...otherProps }) => (
     fixed
     style = {{
       paddingLeft: '16px',
+      paddingRight: '16px',
       zIndex: 2,
     }}
   >
-    <ToolbarRow style={{paddingTop: "16px", paddingBottom: "16px"}}>
+    <ToolbarRow>
       <ToolbarSection 
         align="start"
       >

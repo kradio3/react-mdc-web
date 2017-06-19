@@ -1,7 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { ROOT, OPEN, SURFACE, BACKDROP, SCROLL_LOCK } from './constants';
+import {
+  ANIMATING,
+  ROOT,
+  OPEN,
+  SURFACE,
+  BACKDROP,
+  SCROLL_LOCK,
+} from './constants';
 
 class Dialog extends Component {
 
@@ -12,14 +19,21 @@ class Dialog extends Component {
     open: PropTypes.bool,
   }
 
+  constructor(props) {
+    super(props);
+    this.state = { animating: false };
+  }
+
   componentWillReceiveProps({ open: nextOpen }) {
     const { open } = this.props;
     const onOpen = !open && nextOpen;
     const onClose = open && !nextOpen;
     if (onOpen) {
+      this.setState({ animating: true });
       document.body.classList.add(SCROLL_LOCK);
       document.addEventListener('keydown', (e) => { this.handleKeyDown(e); });
     } else if (onClose) {
+      this.setState({ animating: true });
       document.body.classList.remove(SCROLL_LOCK);
       document.removeEventListener('keydown', (e) => { this.handleKeyDown(e); });
     }
@@ -40,9 +54,11 @@ class Dialog extends Component {
     return (
       <aside
         className={classnames(ROOT, {
+          [ANIMATING]: this.state.animating,
           [OPEN]: open,
         }, className)}
         onClick={(e) => { if (onClose) onClose(e); }}
+        onTransitionEnd={() => { this.setState({ animating: false }); }}
         {...ariaHiddenProp}
         {...otherProps}
       >

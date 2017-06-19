@@ -1,6 +1,7 @@
 // general
 export const ROOT = 'mdc-dialog';
 export const OPEN = `${ROOT}--open`;
+export const ANIMATING = `${ROOT}--animating`;
 export const BACKDROP = `${ROOT}__backdrop`;
 export const SURFACE = `${ROOT}__surface`;
 

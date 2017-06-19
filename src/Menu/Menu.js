@@ -3,7 +3,7 @@ import React, { Children } from 'react';
 /* eslint-disable import/no-unresolved, import/extensions*/
 import { clamp } from './util';
 /* eslint-enable import/no-unresolved, import/extensions*/
-import AnimationController from './AnimationController';
+import AnimationController from '../Animation/AnimationController';
 import DocumentClickHandler from './DocumentClickHandler';
 import MenuList from './MenuList';
 import MenuSlider from './MenuSlider';
