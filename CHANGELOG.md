@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.14.0"></a>
+# [0.14.0](https://github.com/kradio3/react-mdc-web/compare/v0.13.0...v0.14.0) (2017-06-28)
+
+
+### Features
+
+* **CardTitle:** possibility to define large title (#29) ([db55edf](https://github.com/kradio3/react-mdc-web/commit/db55edf))
+
+
+
 <a name="0.13.0"></a>
 # [0.13.0](https://github.com/kradio3/react-mdc-web/compare/v0.12.2...v0.13.0) (2017-06-15)
 
