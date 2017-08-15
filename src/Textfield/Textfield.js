@@ -13,6 +13,8 @@ class Textfield extends React.PureComponent {
     helptext: PropTypes.string,
     helptextPersistent: PropTypes.bool,
     helptextValidation: PropTypes.bool,
+    useInvalidProp: PropTypes.bool,
+    invalid: PropTypes.bool,
     id: PropTypes.string,
     multiline: PropTypes.bool,
     required: PropTypes.bool,
