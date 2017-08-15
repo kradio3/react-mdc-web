@@ -36,7 +36,7 @@ class Textfield extends React.PureComponent {
   }
 
   renderField() {
-    const { focus, invalid } = this.state;
+    var { focus, invalid } = this.state;
     const {
       className,
       disabled,
@@ -83,7 +83,7 @@ class Textfield extends React.PureComponent {
   }
 
   renderHelptext() {
-    const { focus, invalid } = this.state;
+    var { focus, invalid } = this.state;
     const { helptext, helptextPersistent, helptextValidation, useInvalidProp , invalid : invalidProp } = this.props;
     if (useInvalidProp) invalid = !!invalidProp;
     return (
