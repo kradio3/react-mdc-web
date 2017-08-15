@@ -1,12 +1,11 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import Label from './Label';
-import Input from './Input';
-import Field from './Field';
-import Helptext from './Helptext';
+import PropTypes from "prop-types";
+import React from "react";
+import Label from "./Label";
+import Input from "./Input";
+import Field from "./Field";
+import Helptext from "./Helptext";
 
 class Textfield extends React.PureComponent {
-
   static propTypes = {
     className: PropTypes.string,
     disabled: PropTypes.bool,
@@ -17,12 +16,12 @@ class Textfield extends React.PureComponent {
     id: PropTypes.string,
     multiline: PropTypes.bool,
     required: PropTypes.bool,
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  };
 
   constructor(props) {
     super(props);
-    this.state = { };
+    this.state = {};
   }
 
   onFocus() {
@@ -43,13 +42,16 @@ class Textfield extends React.PureComponent {
       helptext, // eslint-disable-line no-unused-vars
       helptextPersistent, // eslint-disable-line no-unused-vars
       helptextValidation, // eslint-disable-line no-unused-vars
+      useInvalidProp,
+      invalid: invalidProp,
       id,
       multiline,
       value, // eslint-disable-line no-unused-vars
       ...otherProps
     } = this.props;
-    const label = floatingLabel || '';
-    const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
+    if (useInvalidProp) invalid = !!invalidProp;
+    const label = floatingLabel || "";
+    const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, "")}`;
     return (
       <Field
         className={className}
@@ -62,16 +64,16 @@ class Textfield extends React.PureComponent {
           disabled={disabled}
           id={customId}
           multiline={multiline}
-          onBlur={(event) => { this.onBlur(event); }}
-          onFocus={() => { this.onFocus(); }}
+          onBlur={event => {
+            this.onBlur(event);
+          }}
+          onFocus={() => {
+            this.onFocus();
+          }}
           value={value}
           {...otherProps}
         />
-        <Label
-          focused={focus}
-          id={customId}
-          value={value}
-        >
+        <Label focused={focus} id={customId} value={value}>
           {floatingLabel}
         </Label>
       </Field>
@@ -80,7 +82,8 @@ class Textfield extends React.PureComponent {
 
   renderHelptext() {
     const { focus, invalid } = this.state;
-    const { helptext, helptextPersistent, helptextValidation } = this.props;
+    const { helptext, helptextPersistent, helptextValidation, useInvalidProp , invalid : invalidProp } = this.props;
+    if (useInvalidProp) invalid = !!invalidProp;
     return (
       <Helptext
         focused={focus}
@@ -88,7 +91,7 @@ class Textfield extends React.PureComponent {
         helptextPersistent={helptextPersistent}
         helptextValidation={helptextValidation}
       >
-        { helptext }
+        {helptext}
       </Helptext>
     );
   }

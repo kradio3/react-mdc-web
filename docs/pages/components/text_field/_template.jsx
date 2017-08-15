@@ -4,6 +4,7 @@ import FloatingLabel from './_FloatingLabel'
 import Helptext from './_Helptext'
 import HelptextPersistent from './_HelptextPersistent'
 import HelptextValidation from './_HelptextValidation'
+import UseInvalidProp from './_UseInvalidProp'
 import Multiline from './_Multiline'
 
 class Template extends React.PureComponent {
@@ -24,6 +25,9 @@ class Template extends React.PureComponent {
 
     const helptextValidation = document.getElementById("text-field-validation");
     ReactDOM.render(<HelptextValidation/>, helptextValidation);
+
+    const useInvalidProp = document.getElementById("text-field-invalidprop");
+    ReactDOM.render(<UseInvalidProp/>, useInvalidProp);
 
     const multiline = document.getElementById("text-field-multiline");
     ReactDOM.render(<Multiline/>, multiline);
