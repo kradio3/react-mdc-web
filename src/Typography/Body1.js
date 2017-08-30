@@ -5,13 +5,13 @@ const defaultProps = {
   component: 'p',
 };
 
-const Body2 = props => (
+const Body1 = props => (
   <TypographyElement
-    modificator="body2"
+    modificator="body1"
     {...props}
   />
 );
 
-Body2.defaultProps = defaultProps;
-export default Body2;
+Body1.defaultProps = defaultProps;
+export default Body1;
 
