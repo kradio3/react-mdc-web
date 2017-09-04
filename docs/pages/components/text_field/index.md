@@ -92,6 +92,26 @@ text-field-validation
 />
 ```
 
+### Use "invalid" Prop
+You can use the invalid prop to change validity status. This works if ```useInvalidProp```  is true.
+```react-snippet
+text-field-invalidprop
+```
+```jsx
+<Textfield
+  floatingLabel="Password"
+  type="password"
+  useInvalidProp
+  invalid={true}
+  helptext="Your password is invalid."
+  helptextValidation
+  value={this.state.password}
+  onChange={({ target: { value: password } }) => {
+    this.setState({ password });
+  }}
+/>
+```
+
 ### Multiline
 ```react-snippet
 text-field-multiline

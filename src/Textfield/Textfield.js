@@ -14,6 +14,8 @@ class Textfield extends React.PureComponent {
     helptext: PropTypes.string,
     helptextPersistent: PropTypes.bool,
     helptextValidation: PropTypes.bool,
+    useInvalidProp: PropTypes.bool,
+    invalid: PropTypes.bool,
     id: PropTypes.string,
     multiline: PropTypes.bool,
     required: PropTypes.bool,
@@ -35,7 +37,8 @@ class Textfield extends React.PureComponent {
   }
 
   renderField() {
-    const { focus, invalid } = this.state;
+    const focus = this.state.focus;
+    let invalid = this.state.invalid;
     const {
       className,
       disabled,
@@ -43,11 +46,14 @@ class Textfield extends React.PureComponent {
       helptext, // eslint-disable-line no-unused-vars
       helptextPersistent, // eslint-disable-line no-unused-vars
       helptextValidation, // eslint-disable-line no-unused-vars
+      useInvalidProp,
+      invalid: invalidProp,
       id,
       multiline,
       value, // eslint-disable-line no-unused-vars
       ...otherProps
     } = this.props;
+    if (useInvalidProp) invalid = !!invalidProp;
     const label = floatingLabel || '';
     const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
     return (
@@ -79,8 +85,15 @@ class Textfield extends React.PureComponent {
   }
 
   renderHelptext() {
-    const { focus, invalid } = this.state;
-    const { helptext, helptextPersistent, helptextValidation } = this.props;
+    const focus = this.state.focus;
+    let invalid = this.state.invalid;
+    const {
+      helptext,
+      helptextPersistent,
+      helptextValidation,
+      useInvalidProp,
+      invalid: invalidProp } = this.props;
+    if (useInvalidProp) invalid = !!invalidProp;
     return (
       <Helptext
         focused={focus}
