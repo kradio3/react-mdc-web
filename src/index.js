@@ -33,5 +33,5 @@ export {
 export { GridList, Tile, TilePrimary, TileSecondary, TileContent, TileTitle, TileSupportText } from './GridList';
 export { default as Slider } from './Slider';
 export { default as Switch } from './Switch';
-export { Tab, Tabbar } from './Tabs';
+export { Tab, Tabbar, TabbarScroller } from './Tabs';
 export { default as LinearProgress } from './LinearProgress';
