@@ -22,7 +22,7 @@ description: "Material Design Components for React"
 * ##### Bundlers
   Import 'react-mdc-web', if you are using bundler, such as webpack or Browserify
   ```jsx
-  import {Card, CardHeader, CardTitle} from 'react-mdc-web';
+  import {Card, CardHeader, CardTitle} from 'react-mdc-web/lib';
   ```
   
   Or default import to reduce chunks sizes:
