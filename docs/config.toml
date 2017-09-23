@@ -45,6 +45,9 @@ linkPrefix = "/react-mdc-web"
   name = "Radio"
   path = "/components/radio/"
 [[components]]
+  name = "Slider"
+  path = "/components/slider/"
+[[components]]
   name = "Snackbar"
   path = "/components/snackbar/"
 [[components]]
