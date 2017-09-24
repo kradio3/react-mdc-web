@@ -23,12 +23,69 @@ import '../../node_modules/material-components-web/dist/material-components-web.
 import 'prismjs/themes/prism-okaidia.css'
 import 'css/main.css'
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      children: React.PropTypes.object,
+export default class Main extends React.Component {
+  static propTypes = {
+    children: React.PropTypes.object,
+  }
+
+  componentWillMount() {
+    // See the counterpart that sets the cookie in ToolbarBase
+    const mode = document.cookie.replace(/(?:(?:^|.*;\s*)toolbar-mode\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+
+    var toolbarMode = {}
+    if (mode == 'normal') {
+      toolbarMode = {
+        fixed: false,
+        waterfall: false,
+        flexible: false,
+        flexibleDefaultBehavior: false,
+        fixedLastRowOnly: false
+      };
+    } else if (mode == 'waterfall-flexible') {
+      toolbarMode = {
+        fixed: true,
+        waterfall: true,
+        flexible: true,
+        flexibleDefaultBehavior: true,
+        fixedLastRowOnly: false
+      };
+    } else if (mode == 'waterfall-flexible-fixedLastRowOnly') {
+      toolbarMode = {
+        fixed: true,
+        waterfall: true,
+        flexible: true,
+        flexibleDefaultBehavior: true,
+        fixedLastRowOnly: true
+      };
+    } else if (mode == 'waterfall') {
+      toolbarMode = {
+        fixed: true,
+        waterfall: true,
+        flexible: false,
+        flexibleDefaultBehavior: false,
+        fixedLastRowOnly: false
+      };
+    } else if (mode == 'flexible') {
+      toolbarMode = {
+        fixed: false,
+        waterfall: false,
+        flexible: true,
+        flexibleDefaultBehavior: false,
+        fixedLastRowOnly: false
+      };
+    } else { // default is fixed
+      toolbarMode = {
+        fixed: true,
+        waterfall: false,
+        flexible: false,
+        flexibleDefaultBehavior: false,
+        fixedLastRowOnly: false
+      };
     }
-  },
+
+    this.setState({toolbarMode: toolbarMode});
+  }
+
   render () {
     const isIntroductionActive = this.props.location.pathname===prefixLink('/');
     const isThemingActive = this.props.location.pathname===prefixLink('/theming/');
@@ -48,8 +105,9 @@ module.exports = React.createClass({
       <Layout>
         <Toolbar 
           title={config.siteTitle}
+          toolbarMode={this.state.toolbarMode}
         />
-        <Content>
+        <Content fixed={this.state.toolbarMode.fixed}>
           <Drawer
             permanent
             style={{height: 'inherit', minHeight: '100%'}}
@@ -81,5 +139,5 @@ module.exports = React.createClass({
         </Content>
       </Layout>
     )
-  },
-})
+  }
+}

@@ -7,8 +7,10 @@ const propTypes = {
   children: PropTypes.node,
 };
 
-const AppContent = ({ children }) => (
-  <Content 
+const AppContent = ({ fixed, children, className }) => (
+  <Content
+    fixed={fixed}
+    className={className}
     style={{
       display: "flex",
       boxSizing: "border-box",

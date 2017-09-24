@@ -2,7 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 
+const FIXED_ADJUST = 'mdc-toolbar-fixed-adjust';
+
 const propTypes = {
+  fixed: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
   component: PropTypes.string,
@@ -13,12 +16,16 @@ const defaultProps = {
 };
 
 const Content = ({
+  fixed,
   className,
   children,
   component,
   ...otherProps
 }) => {
-  const classes = classnames('mdc-content', className);
+  const classes = classnames('mdc-content', {
+    [FIXED_ADJUST]: fixed,
+  }, className);
+
   return React.createElement(component, {
     className: classes,
     ...otherProps,

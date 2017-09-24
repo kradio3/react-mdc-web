@@ -7,51 +7,67 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Logo from '../Logo';
 
-const propTypes = {
-  className: PropTypes.string,
-  title: PropTypes.string,
-};
 
-const AppToolbar = ({ className, title, ...otherProps }) => (
-  <Toolbar
-    fixed
-    style = {{
-      paddingLeft: '16px',
-      paddingRight: '16px',
-      zIndex: 2,
-    }}
-  >
-    <ToolbarRow>
-      <ToolbarSection 
-        align="start"
+export default class AppToolbar extends React.Component {
+
+  static propTypes = {
+    className: PropTypes.string,
+    title: PropTypes.string,
+    toolbarMode: PropTypes.object
+  }
+
+  render() {
+    const { className, title, toolbarMode, ...otherProps } = this.props;
+
+    return <Toolbar
+        fixed = {toolbarMode.fixed}
+        waterfall = {toolbarMode.waterfall}
+        flexible = {toolbarMode.flexible}
+        fixedLastRowOnly = {toolbarMode.fixedLastRowOnly}
+        flexibleDefaultBehavior = {toolbarMode.flexibleDefaultBehavior}
+        style = {{
+          paddingLeft: '16px',
+          paddingRight: '16px',
+        }}
+        ref={(node) => { this.node = node; }}
       >
-        <Logo/>
-        <ToolbarTitle style={{lineHeight: "36px"}}>
-          <Link
-            to={prefixLink('/')}
-            style={{ color: colors.fg }}
-            className="site-title"
+        <ToolbarRow>
+          <ToolbarSection
+            align="start"
           >
-            {title}
-          </Link>
-        </ToolbarTitle>
-      </ToolbarSection>
-      <ToolbarSection 
-        align="end"
-      >
-        <a
-          style={{
-            color: colors.fg,
-            textDecoration: 'none',
-            lineHeight: '36px',
-          }}
-          href="https://github.com/kradio3/react-mdc-web"
-        >
-          Github
-        </a>
-      </ToolbarSection>
-    </ToolbarRow>
-  </Toolbar>
-);
-AppToolbar.propTypes = propTypes;
-export default AppToolbar;
+            <Logo/>
+            <ToolbarTitle style={{lineHeight: "36px"}}>
+              <Link
+                to={prefixLink('/')}
+                style={{ color: colors.fg }}
+                className="site-title"
+              >
+                {title}
+              </Link>
+            </ToolbarTitle>
+          </ToolbarSection>
+          <ToolbarSection
+            align="end"
+          >
+            <a
+              style={{
+                color: colors.fg,
+                textDecoration: 'none',
+                lineHeight: '36px',
+              }}
+              href="https://github.com/kradio3/react-mdc-web"
+            >
+              Github
+            </a>
+          </ToolbarSection>
+        </ToolbarRow>
+        {toolbarMode.fixedLastRowOnly &&
+          <ToolbarRow>
+            <ToolbarSection>
+              The last row
+            </ToolbarSection>
+          </ToolbarRow>
+        }
+    </Toolbar>
+  }
+}
