@@ -5,7 +5,7 @@ import Helptext from './_Helptext'
 import HelptextPersistent from './_HelptextPersistent'
 import HelptextValidation from './_HelptextValidation'
 import UseInvalidProp from './_UseInvalidProp'
-import Multiline from './_Multiline'
+import Textarea from './_Textarea'
 
 class Template extends React.PureComponent {
 
@@ -29,8 +29,8 @@ class Template extends React.PureComponent {
     const useInvalidProp = document.getElementById("text-field-invalidprop");
     ReactDOM.render(<UseInvalidProp/>, useInvalidProp);
 
-    const multiline = document.getElementById("text-field-multiline");
-    ReactDOM.render(<Multiline/>, multiline);
+    const textarea = document.getElementById("text-field-textarea");
+    ReactDOM.render(<Textarea/>, textarea);
 
   } 
 

@@ -112,14 +112,14 @@ text-field-invalidprop
 />
 ```
 
-### Multiline
+### Textarea
 ```react-snippet
-text-field-multiline
+text-field-textarea
 ```
 ```jsx
 <Textfield
   floatingLabel="Description"
-  multiline
+  textarea
   rows="8"
   cols="40"
   value={this.state.description}
