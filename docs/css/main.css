@@ -65,3 +65,14 @@ code[class*="language-"]{
   font-size: 0.85rem;
 }
 
+/* Needed to make demo buttons pick up the primary color, since the concept of primary button is
+   removed in mdc version 0.21 */
+.mdc-button--raised {
+  background-color: var(--mdc-theme-primary, #3f51b5) !important;
+  color: var(--mdc-theme-text-primary-on-primary,#fff) !important;  
+}
+
+.mdc-snackbar__action-button {
+  color: var(--mdc-theme-accent,#ff4081) !important;
+  background-color: unset !important;
+}

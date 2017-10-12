@@ -9,19 +9,16 @@ const propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   mini: PropTypes.bool,
-  plain: PropTypes.bool,
 };
 
 const Fab = ({
   className,
   mini,
-  plain,
   ...otherProps
 }) => {
   const classes = classnames(
     ROOT, {
       [`${ROOT}--mini`]: mini,
-      [`${ROOT}--plain`]: plain,
     }, className);
 
   const children = Children.map(otherProps.children, (child) => {

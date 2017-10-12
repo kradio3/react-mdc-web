@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
-import Button from '../Button/Button';
 
 const ROOT = 'mdc-snackbar';
 const ACTIVE = `${ROOT}--active`;
@@ -88,12 +87,13 @@ class Snackbar extends React.PureComponent {
           aria-hidden={!onClick || !action || !open}
           className={ACTION_WRAPPER}
         >
-          <Button
+          <button
+            type="button"
             className={ACTION_BUTTON}
             onClick={(event) => { if (onClick) onClick(event); }}
           >
             {action}
-          </Button>
+          </button>
         </div>
       </div>
     );

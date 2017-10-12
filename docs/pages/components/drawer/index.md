@@ -24,7 +24,6 @@ temporary
 ```
 ```jsx
 <Button 
-  primary
   raised 
   onClick={()=> { this.setState({isOpen: !this.state.isOpen}) }}
 >

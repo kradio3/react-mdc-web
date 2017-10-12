@@ -15,7 +15,6 @@ class Singleline extends React.PureComponent {
       <div>
         <Button 
           raised
-          primary
           onClick={()=> { this.setState({snackbar: true}) }}
         >Open snackbar</Button>
         <Snackbar

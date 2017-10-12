@@ -23,9 +23,7 @@ class Buttons extends React.PureComponent {
       <div>
         <Button style={{margin:'16px'}} raised={isRaised}>Default</Button>
         <Button style={{margin:'16px'}} raised={isRaised} dense>Dense</Button>
-        <Button style={{margin:'16px'}} raised={isRaised} primary>Primary</Button>
         <Button style={{margin:'16px'}} raised={isRaised} compact>Compact</Button>
-        <Button style={{margin:'16px'}} raised={isRaised} accent>Accent</Button>
       </div>
     )
   }

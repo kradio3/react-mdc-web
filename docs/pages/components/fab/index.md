@@ -11,11 +11,4 @@ fabs
 
 {/* Mini */}
 <Fab mini><Icon name='create'/></Fab>
-
-{/* Plain */}
-<Fab plain><Icon name='create'/></Fab>
-
-{/* Plain mini */}
-<Fab plain mini><Icon name='create'/></Fab>
-
 ```

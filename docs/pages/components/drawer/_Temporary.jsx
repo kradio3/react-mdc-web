@@ -19,7 +19,6 @@ class Permanent extends React.PureComponent {
     return (
       <div>
         <Button 
-          primary
           raised 
           onClick={()=> { this.setState({isOpen: !this.state.isOpen}) }}
         >
