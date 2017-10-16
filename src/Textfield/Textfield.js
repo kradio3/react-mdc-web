@@ -1,14 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import classnames from 'classnames';
 import Label from './Label';
 import Input from './Input';
 import Field from './Field';
 import Helptext from './Helptext';
-
-const ROOT = 'mdc-textfield';
-const BOTTOMLINE = `${ROOT}__bottom-line`;
-const BOTTOMLINEFOCUSED = `${BOTTOMLINE}--active`;
+import BottomLine from './BottomLine';
 
 class Textfield extends React.PureComponent {
 
@@ -86,10 +82,7 @@ class Textfield extends React.PureComponent {
         >
           {floatingLabel}
         </Label>
-        <div
-          className={classnames(BOTTOMLINE, {
-            [BOTTOMLINEFOCUSED]: focus })}
-        />
+        <BottomLine active={focus} />
       </Field>
     );
   }
