@@ -12,7 +12,6 @@ class Counter extends React.PureComponent {
       <div style={{margin: '16px 0'}}>
         <Button 
           raised 
-          primary
           onClick={() => {
             let { counter } = this.state;
             counter ++;

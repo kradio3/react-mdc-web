@@ -8,7 +8,6 @@ simple
 ```
 ```jsx
 <Button
-  primary
   raised
   onClick={()=> { this.setState({isOpen: true}) }}
 >
@@ -36,7 +35,6 @@ scrollable
 ```
 ```jsx
 <Button
-  primary
   raised
   onClick={()=> { this.setState({isOpen: true}) }}
 >

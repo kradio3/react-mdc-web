@@ -17,7 +17,6 @@ class Standard extends React.PureComponent {
     return (
       <div>
         <Button
-          primary
           raised
           onClick={()=> { this.setState({isOpen: true}) }}
         >

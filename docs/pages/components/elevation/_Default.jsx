@@ -29,7 +29,6 @@ class Default extends React.PureComponent {
         <div>
           <Button 
             raised
-            primary
             onClick={() => {
               this.setState({level: level===0?4:0});
             }}

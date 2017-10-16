@@ -19,8 +19,6 @@ class Template extends React.PureComponent {
       <div>
         <Fab style={{margin: '16px'}}><Icon name='create'/></Fab>
         <Fab style={{margin: '16px'}} mini><Icon name='create'/></Fab>
-        <Fab style={{margin: '16px'}} plain><Icon name='create'/></Fab>
-        <Fab style={{margin: '16px'}} plain mini><Icon name='create'/></Fab>
       </div>
     )
   }

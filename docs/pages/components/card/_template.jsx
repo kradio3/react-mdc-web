@@ -34,8 +34,8 @@ class Template extends React.PureComponent {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </CardText>
         <CardActions>
-          <Button compact primary>action 1</Button>
-          <Button compact >action 2</Button>
+          <Button compact>action 1</Button>
+          <Button compact>action 2</Button>
         </CardActions>
       </Card>
     )
@@ -58,8 +58,8 @@ class Template extends React.PureComponent {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </CardText>
         <CardActions>
-          <Button compact primary>action 1</Button>
-          <Button compact >action 2</Button>
+          <Button compact>action 1</Button>
+          <Button compact>action 2</Button>
         </CardActions>
       </Card>
     )

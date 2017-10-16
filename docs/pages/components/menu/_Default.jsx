@@ -13,7 +13,6 @@ class Default extends React.PureComponent {
     return (
       <div>
         <Button
-          primary
           raised
           onClick={()=>{this.setState({open:true})}}
         >
