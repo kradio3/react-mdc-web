@@ -4,6 +4,7 @@ import Label from './Label';
 import Input from './Input';
 import Field from './Field';
 import Helptext from './Helptext';
+import BottomLine from './BottomLine';
 
 class Textfield extends React.PureComponent {
 
@@ -80,6 +81,7 @@ class Textfield extends React.PureComponent {
         >
           {floatingLabel}
         </Label>
+        <BottomLine active={focus} />
       </Field>
     );
   }
