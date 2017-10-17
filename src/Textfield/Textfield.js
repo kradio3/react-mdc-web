@@ -5,6 +5,7 @@ import Label from './Label';
 import Input from './Input';
 import Field from './Field';
 import Helptext from './Helptext';
+import BottomLine from './BottomLine';
 
 const ROOT = 'mdc-textfield';
 const BOTTOMLINE = `${ROOT}__bottom-line`;
@@ -86,10 +87,7 @@ class Textfield extends React.PureComponent {
         >
           {floatingLabel}
         </Label>
-        <div
-          className={classnames(BOTTOMLINE, {
-            [BOTTOMLINEFOCUSED]: focus })}
-        />
+        <BottomLine active={focus} />
       </Field>
     );
   }
