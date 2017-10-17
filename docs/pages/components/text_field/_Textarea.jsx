@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react'
 import Textfield from '../../../../src/Textfield/Textfield'
 import {Grid, Cell} from '../../../../src/Grid'
 
-class Multiline extends React.PureComponent {
+class Textarea extends React.PureComponent {
 
   constructor(props){
     super(props);
@@ -13,7 +13,7 @@ class Multiline extends React.PureComponent {
     return (
       <Textfield
         floatingLabel="Description"
-        multiline
+        textarea
         rows="8"
         cols="40"
         value={this.state.description}
@@ -24,4 +24,4 @@ class Multiline extends React.PureComponent {
     )
   }
 }
-export default Multiline;
+export default Textarea;

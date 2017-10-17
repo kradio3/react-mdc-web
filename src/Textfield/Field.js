@@ -8,20 +8,20 @@ const propTypes = {
   disabled: PropTypes.bool,
   focused: PropTypes.bool,
   invalid: PropTypes.bool,
-  multiline: PropTypes.bool,
+  textarea: PropTypes.bool,
 };
 
 const ROOT = 'mdc-textfield';
-const MULTILINE = `${ROOT}--multiline`;
+const TEXTAREA = `${ROOT}--textarea`;
 const DISABLED = `${ROOT}--disabled`;
 const FOCUSED = `${ROOT}--focused`;
 const INVALID = `${ROOT}--invalid`;
 const UPGRADED = `${ROOT}--upgraded`;
 
-const Field = ({ className, focused, disabled, invalid, children, multiline }) => (
+const Field = ({ className, focused, disabled, invalid, children, textarea }) => (
   <div
     className={classnames(ROOT, {
-      [MULTILINE]: multiline,
+      [TEXTAREA]: textarea,
       [FOCUSED]: focused,
       [DISABLED]: disabled,
       [INVALID]: invalid,

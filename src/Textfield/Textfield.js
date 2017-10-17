@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import classnames from 'classnames';
 import Label from './Label';
 import Input from './Input';
 import Field from './Field';
 import Helptext from './Helptext';
+
+const ROOT = 'mdc-textfield';
+const BOTTOMLINE = `${ROOT}__bottom-line`;
+const BOTTOMLINEFOCUSED = `${BOTTOMLINE}--active`;
 
 class Textfield extends React.PureComponent {
 
@@ -17,7 +22,7 @@ class Textfield extends React.PureComponent {
     useInvalidProp: PropTypes.bool,
     invalid: PropTypes.bool,
     id: PropTypes.string,
-    multiline: PropTypes.bool,
+    textarea: PropTypes.bool,
     required: PropTypes.bool,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }
@@ -49,25 +54,26 @@ class Textfield extends React.PureComponent {
       useInvalidProp,
       invalid: invalidProp,
       id,
-      multiline,
+      textarea,
       value, // eslint-disable-line no-unused-vars
       ...otherProps
     } = this.props;
     if (useInvalidProp) invalid = !!invalidProp;
     const label = floatingLabel || '';
     const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
+
     return (
       <Field
         className={className}
         disabled={disabled}
         focused={focus}
         invalid={invalid}
-        multiline={multiline}
+        textarea={textarea}
       >
         <Input
           disabled={disabled}
           id={customId}
-          multiline={multiline}
+          textarea={textarea}
           onBlur={(event) => { this.onBlur(event); }}
           onFocus={() => { this.onFocus(); }}
           value={value}
@@ -80,6 +86,10 @@ class Textfield extends React.PureComponent {
         >
           {floatingLabel}
         </Label>
+        <div
+          className={classnames(BOTTOMLINE, {
+            [BOTTOMLINEFOCUSED]: focus })}
+        />
       </Field>
     );
   }
