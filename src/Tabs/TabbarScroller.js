@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import TabbarScrollerIndicator from './TabbarScrollerIndicator';
 
@@ -13,23 +14,45 @@ class TabbarScroller extends React.PureComponent {
     className: PropTypes.string, 
   };
 
-  scrollForward() { 
-    console.log('scroll forward', this.frame.getBoundingClientRect());
-    requestAnimationFrame(() => {
-      this.frame.style.setProperty('transform', 'translateX(-100px)');
+  constructor(props) {
+    super(props);
+    this.state = { translate: 0};
+    this.tabs = [];
+  }
 
-    });
+  scrollForward() { 
+    const {right: frameRight, left: frameLeft} = this.frame.getBoundingClientRect();
+    let tabLeftPosition = 0;
+    for(const tab of this.tabs) {
+      const {right: tabRight, left: tabLeft} = ReactDOM.findDOMNode(tab).getBoundingClientRect();
+      if(tabRight > frameRight) {
+        tabLeftPosition = tabLeft;
+        break;
+      }
+    }
+    const scrollTo = tabLeftPosition - frameLeft;
+
+    this.setState({translate: this.state.translate-scrollTo});
   }
 
   scrollBack() {
-    console.log('scroll back');
+    const {translate} = this.state;
+    let newTranslate = translate +300;
+    if(newTranslate <= 0) {
+      this.setState({translate: this.state.translate + 500});
+    }
   }
 
   render () {
     const { className, children, ...otherProps } = this.props;
     const tabbar = React.cloneElement(React.Children.only(children), {
+      className: 'mdc-tab-bar-scroller__scroll-frame__tabs',
+      translate: this.state.translate,
       onTabAdded: (tab)=>{
-        console.log('scroller add', tab);
+        this.tabs.push(tab);
+
+        //console.log('dom', ReactDOM.findDOMNode(tab).getBoundingClientRect());
+        //console.log('scroller add', tab.getBoundingClientRect());
       }
     });
     return (
@@ -38,7 +61,7 @@ class TabbarScroller extends React.PureComponent {
         {...otherProps}
       >
         <TabbarScrollerIndicator
-
+          onClick = {() => this.scrollBack()}
         />
         <div 
           className={FRAME} 

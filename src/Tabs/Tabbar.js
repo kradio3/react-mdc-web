@@ -11,10 +11,12 @@ class Tabbar extends React.PureComponent   {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    onTabAdded:PropTypes.func,
+    translate: PropTypes.number,
   };
 
   render () {
-    const {className, children, onTabAdded, ...otherProps} = this.props;
+    const {className, children, onTabAdded, translate, ...otherProps} = this.props;
     const childs = React.Children.map(children, (child, index) => {
       if(child.type===Tab) {
         return React.cloneElement(child, {ref: (node)=>{
@@ -30,6 +32,7 @@ class Tabbar extends React.PureComponent   {
       <nav
         className={classnames(ROOT, className)}
         {...otherProps}
+        style={{transform:`translateX(${translate}px)`}}
       >
         {childs}
         <span className={`${ROOT}__indicator`} />
