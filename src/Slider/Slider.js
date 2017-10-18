@@ -66,8 +66,16 @@ export default class Slider extends Component {
   }
 
   render() {
-    const { className, value, min, max, step, discrete, showMarkers = false,
-            ...otherProps } = this.props;
+    const {
+      className,
+      value, // eslint-disable-line no-unused-vars
+      min, // eslint-disable-line no-unused-vars
+      max, // eslint-disable-line no-unused-vars
+      step, // eslint-disable-line no-unused-vars
+      discrete,
+      showMarkers = false,
+      ...otherProps
+    } = this.props;
 
     return (
       <div
