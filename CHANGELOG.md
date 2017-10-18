@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.15.0"></a>
+# [0.15.0](https://github.com/kradio3/react-mdc-web/compare/v0.14.0...v0.15.0) (2017-10-18)
+
+
+### Bug Fixes
+
+* **Typography:** filenames for Body1 and Body2 (#43) ([d068384](https://github.com/kradio3/react-mdc-web/commit/d068384))
+
+
+### Features
+
+* **CardHorizontalBlock:** new component (#35) ([b895283](https://github.com/kradio3/react-mdc-web/commit/b895283))
+* **Slider:** create new component (#47) ([147fade](https://github.com/kradio3/react-mdc-web/commit/147fade))
+* **Textfield:** extend by invalid property (#38) ([dea96eb](https://github.com/kradio3/react-mdc-web/commit/dea96eb))
+
+
+* Update to material-components-web v0.22.0 ([ff19ccd](https://github.com/kradio3/react-mdc-web/commit/ff19ccd))
+
+
+### BREAKING CHANGES
+
+* * DOM change to add a bottom line element
+* multi-line text field is now called textarea
+
+
+
 <a name="0.14.0"></a>
 # [0.14.0](https://github.com/kradio3/react-mdc-web/compare/v0.13.0...v0.14.0) (2017-06-28)
 
