@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
-import {Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle} from '../../../src/Toolbar';
+import {Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon} from '../../../src/Toolbar';
 import { colors, activeColors } from 'utils/colors'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
@@ -35,7 +35,9 @@ export default class AppToolbar extends React.Component {
           <ToolbarSection
             align="start"
           >
-            <Logo/>
+            <ToolbarIcon menu={true}>
+              <Logo/>
+            </ToolbarIcon>
             <ToolbarTitle style={{lineHeight: "36px"}}>
               <Link
                 to={prefixLink('/')}
@@ -49,16 +51,16 @@ export default class AppToolbar extends React.Component {
           <ToolbarSection
             align="end"
           >
-            <a
-              style={{
-                color: colors.fg,
-                textDecoration: 'none',
-                lineHeight: '36px',
-              }}
-              href="https://github.com/kradio3/react-mdc-web"
-            >
-              Github
-            </a>
+            <ToolbarIcon>
+              <a
+                style={{
+                  color: colors.fg,
+                }}
+                href="https://github.com/kradio3/react-mdc-web"
+              >
+                Github
+              </a>
+            </ToolbarIcon>
           </ToolbarSection>
         </ToolbarRow>
         {toolbarMode.fixedLastRowOnly &&
