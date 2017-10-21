@@ -16,7 +16,7 @@ const Label = ({ focused, children, id, value }) => (
   <label
     className={classnames(
         ROOT, {
-          [LABEL_FLOAT_ABOVE]: focused || value,
+          [LABEL_FLOAT_ABOVE]: focused || String(value).length,
         },
       )}
     htmlFor={id}
