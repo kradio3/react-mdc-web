@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.16.0"></a>
+# [0.16.0](https://github.com/kradio3/react-mdc-web/compare/v0.15.0...v0.16.0) (2017-10-23)
+
+
+### Bug Fixes
+
+* **Textfield:** Fix case where `value` === 0 but label doesn't float (#54) ([46d0f81](https://github.com/kradio3/react-mdc-web/commit/46d0f81)), closes [#54](https://github.com/kradio3/react-mdc-web/issues/54)
+
+
+### Features
+
+* **Toolbar:** Support all toolbar modes (#53) ([8c36321](https://github.com/kradio3/react-mdc-web/commit/8c36321))
+
+
+
 <a name="0.15.0"></a>
 # [0.15.0](https://github.com/kradio3/react-mdc-web/compare/v0.14.0...v0.15.0) (2017-10-18)
 
