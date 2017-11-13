@@ -1,7 +1,16 @@
-import ToolbarBase from './_ToolbarBase'
+import React, {PropTypes} from 'react'
+import ToolbarHoc from './_ToolbarHoc'
+import Toolbar from '../../../../src/Toolbar/Toolbar'
 
-export default class Fixed extends ToolbarBase {
-  constructor() {
-    super('fixed');
+class Fixed extends React.PureComponent {
+
+  render () {
+    return (
+      <Toolbar 
+        fixed 
+        {...this.props}
+      />
+    )
   }
 }
+export default ToolbarHoc(Fixed);

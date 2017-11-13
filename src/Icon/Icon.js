@@ -4,16 +4,21 @@ import classnames from 'classnames';
 
 const propTypes = {
   className: PropTypes.string,
+  component: PropTypes.string,
   name: PropTypes.string.isRequired,
 };
 
-const Icon = ({ className, name, ...otherProps }) => (
-  <i
-    className={classnames('material-icons', className)}
-    {...otherProps}
-  >
-    {name}
-  </i>
-  );
+const defaultProps = {
+  component: 'i',
+};
+
+const Icon = ({ className, component, name, ...otherProps }) => {
+  const classes = classnames('material-icons', className);
+  return React.createElement(component, {
+    className: classes,
+    ...otherProps,
+  }, name);
+};
 Icon.propTypes = propTypes;
+Icon.defaultProps = defaultProps;
 export default Icon;

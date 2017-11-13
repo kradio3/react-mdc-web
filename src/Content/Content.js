@@ -22,7 +22,7 @@ const Content = ({
   component,
   ...otherProps
 }) => {
-  const classes = classnames('mdc-content', {
+  const classes = classnames({
     [FIXED_ADJUST]: fixed,
   }, className);
 

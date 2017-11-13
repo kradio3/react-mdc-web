@@ -2,20 +2,32 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 
-const propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node,
-};
 
 const ROOT = 'mdc-toolbar__row';
 
-const ToolbarRow = ({ className, children, ...otherProps }) => (
-  <div
-    className={classnames(ROOT, className)} {...otherProps}
-  >
-    {children}
-  </div>
-);
-ToolbarRow.propTypes = propTypes;
+class ToolbarRow extends React.PureComponent {
+
+  static propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.node,
+    onHeight: PropTypes.func,
+  };
+
+  render() {
+    const { className, children, onHeight, ...otherProps } = this.props;
+    return (
+      <div
+        className={classnames(ROOT, className)} {...otherProps}
+        ref={(native) => {
+          if (native && onHeight) {
+            onHeight(native.offsetHeight);
+          }
+        }}
+      >
+        {children}
+      </div>
+    );
+  }
+}
 export default ToolbarRow;
 
