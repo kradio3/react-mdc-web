@@ -60,11 +60,11 @@ class Dialog extends Component {
         onClick={(e) => { if (onClose) onClose(e); }}
         onTransitionEnd={() => { this.setState({ animating: false }); }}
         {...ariaHiddenProp}
-        {...otherProps}
       >
         <div
           className={SURFACE}
           onClick={(e) => { e.stopPropagation(); }}
+          {...otherProps}
         >
           {children}
         </div>
