@@ -10,9 +10,9 @@ const propTypes = {
   invalid: PropTypes.bool,
 };
 
-const ROOT = 'mdc-text-field-helptext';
-const PERSISTENT = 'mdc-textfield-helptext--persistent';
-const VALIDATION = 'mdc-textfield-helptext--validation-msg';
+const ROOT = 'mdc-text-field-helper-text';
+const PERSISTENT = 'mdc-text-field-helper-text--persistent';
+const VALIDATION = 'mdc-text-field-helper-text--validation-msg';
 
 const Helptext = ({
   children,

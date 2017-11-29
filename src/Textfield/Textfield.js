@@ -9,17 +9,20 @@ import BottomLine from './BottomLine';
 class Textfield extends React.PureComponent {
 
   static propTypes = {
+    box: PropTypes.bool,
+    children: PropTypes.node,
     className: PropTypes.string,
     disabled: PropTypes.bool,
     floatingLabel: PropTypes.string,
     helptext: PropTypes.string,
     helptextPersistent: PropTypes.bool,
     helptextValidation: PropTypes.bool,
-    useInvalidProp: PropTypes.bool,
-    invalid: PropTypes.bool,
     id: PropTypes.string,
-    textarea: PropTypes.bool,
+    invalid: PropTypes.bool,
     required: PropTypes.bool,
+    textarea: PropTypes.bool,
+    trailingIcon: PropTypes.bool,
+    useInvalidProp: PropTypes.bool,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }
 
@@ -41,7 +44,9 @@ class Textfield extends React.PureComponent {
     const focus = this.state.focus;
     let invalid = this.state.invalid;
     const {
+      box,
       className,
+      children,
       disabled,
       floatingLabel,
       helptext, // eslint-disable-line no-unused-vars
@@ -51,6 +56,7 @@ class Textfield extends React.PureComponent {
       invalid: invalidProp,
       id,
       textarea,
+      trailingIcon,
       value, // eslint-disable-line no-unused-vars
       ...otherProps
     } = this.props;
@@ -61,11 +67,14 @@ class Textfield extends React.PureComponent {
     return (
       <Field
         className={className}
+        box={box}
         disabled={disabled}
         focused={focus}
         invalid={invalid}
         textarea={textarea}
+        trailingIcon={trailingIcon}
       >
+        {children}
         <Input
           disabled={disabled}
           id={customId}

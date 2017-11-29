@@ -1,6 +1,6 @@
-/* eslint-disable import/no-unresolved, import/extensions*/
+/* eslint-disable import/no-unresolved, import/extensions */
 import { clamp, bezierProgress } from './util';
-/* eslint-enable import/no-unresolved, import/extensions*/
+/* eslint-enable import/no-unresolved, import/extensions */
 
 import { TRANSITION_SCALE_ADJUSTMENT_X, TRANSITION_SCALE_ADJUSTMENT_Y } from './constants';
 

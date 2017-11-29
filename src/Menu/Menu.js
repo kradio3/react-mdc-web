@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Children } from 'react';
-/* eslint-disable import/no-unresolved, import/extensions*/
+/* eslint-disable import/no-unresolved, import/extensions */
 import { clamp } from './util';
-/* eslint-enable import/no-unresolved, import/extensions*/
+/* eslint-enable import/no-unresolved, import/extensions */
 import AnimationController from '../Animation/AnimationController';
 import DocumentClickHandler from './DocumentClickHandler';
 import MenuList from './MenuList';
