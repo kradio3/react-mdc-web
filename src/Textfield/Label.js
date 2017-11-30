@@ -9,7 +9,7 @@ const propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-const ROOT = 'mdc-textfield__label';
+const ROOT = 'mdc-text-field__label';
 const LABEL_FLOAT_ABOVE = `${ROOT}--float-above`;
 
 const Label = ({ focused, children, id, value }) => (

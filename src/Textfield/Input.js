@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { createElement } from 'react';
 
-const ROOT = 'mdc-textfield__input';
+const ROOT = 'mdc-text-field__input';
 const propTypes = {
   textarea: PropTypes.bool,
 };

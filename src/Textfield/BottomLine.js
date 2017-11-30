@@ -6,7 +6,7 @@ const propTypes = {
   active: PropTypes.bool,
 };
 
-const ROOT = 'mdc-textfield__bottom-line';
+const ROOT = 'mdc-text-field__bottom-line';
 const ACTIVE = `${ROOT}--active`;
 
 const BottomLine = ({ active }) => (

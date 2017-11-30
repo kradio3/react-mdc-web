@@ -10,7 +10,7 @@ const propTypes = {
   invalid: PropTypes.bool,
 };
 
-const ROOT = 'mdc-textfield-helptext';
+const ROOT = 'mdc-text-field-helptext';
 const PERSISTENT = 'mdc-textfield-helptext--persistent';
 const VALIDATION = 'mdc-textfield-helptext--validation-msg';
 

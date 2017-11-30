@@ -11,7 +11,7 @@ const propTypes = {
   textarea: PropTypes.bool,
 };
 
-const ROOT = 'mdc-textfield';
+const ROOT = 'mdc-text-field';
 const TEXTAREA = `${ROOT}--textarea`;
 const DISABLED = `${ROOT}--disabled`;
 const FOCUSED = `${ROOT}--focused`;
