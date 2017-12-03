@@ -128,3 +128,35 @@ text-field-textarea
   }}
 />
 ```
+
+### Leading and trailing icons
+```react-snippet
+text-field-icons
+```
+```jsx
+{/* Leading icon */}
+  <Textfield
+    box
+    floatingLabel="E-Mail"
+    value={this.state.email}
+    onChange={({target : {value : email}}) => {
+      this.setState({ email })
+    }}
+  >
+    <Icon name="email"/>
+  </Textfield>
+
+{/* Trailing icon */}
+  <Textfield
+    box
+    trailingIcon
+    floatingLabel="Phone"
+    value={this.state.phone}
+    onChange={({target : {value : phone}}) => {
+      this.setState({ phone })
+    }}
+  >
+    <Icon name="phone"/>
+  </Textfield>
+/>
+```

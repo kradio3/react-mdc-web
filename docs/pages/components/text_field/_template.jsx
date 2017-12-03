@@ -6,6 +6,7 @@ import HelptextPersistent from './_HelptextPersistent'
 import HelptextValidation from './_HelptextValidation'
 import UseInvalidProp from './_UseInvalidProp'
 import Textarea from './_Textarea'
+import Icons from './_Icons'
 
 class Template extends React.PureComponent {
 
@@ -31,6 +32,9 @@ class Template extends React.PureComponent {
 
     const textarea = document.getElementById("text-field-textarea");
     ReactDOM.render(<Textarea/>, textarea);
+
+    const icons = document.getElementById("text-field-icons");
+    ReactDOM.render(<Icons/>, icons);
 
   } 
 
