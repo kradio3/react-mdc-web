@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.17.0"></a>
+# [0.17.0](https://github.com/kradio3/react-mdc-web/compare/v0.16.0...v0.17.0) (2017-12-05)
+
+
+### Features
+
+* **Dialog:** ability to style dialog using inline styles ([#57](https://github.com/kradio3/react-mdc-web/issues/57)) ([d72c165](https://github.com/kradio3/react-mdc-web/commit/d72c165))
+* **Textfield:** support trailing and leading icons ([#50](https://github.com/kradio3/react-mdc-web/issues/50)) ([9335929](https://github.com/kradio3/react-mdc-web/commit/9335929))
+
+
+
 <a name="0.16.0"></a>
 # [0.16.0](https://github.com/kradio3/react-mdc-web/compare/v0.15.0...v0.16.0) (2017-10-23)
 
