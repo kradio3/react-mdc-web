@@ -58,6 +58,19 @@ class MyComponent extends Component {
 ```
 More samples could be found on the [Documentation Site](https://kradio3.github.io/react-mdc-web/)
 
+## Contribution & Local Development Guide
+
+1. create parent folder react-mdc-web-dev
+1. clone/fork react-mdc-web inside the react-mdc-web-dev folder
+1. create app for testing (for example: git clone https://github.com/kradio3/react-mdc-web-showcase)
+1. should now have folder with react-mdc-web-showcase and react-mdc-web folders inside of it.
+1. cd react-mdc-web-showcase
+1. npm rm --save-dev react-mdc-web
+1. npm i --save-dev ../react-mdc-web
+1. npm i --save-dev material-components-web
+1. npm start
+1. cd ../react-mdc-web
+1. npm run watch
 
 ## License
 MIT, see [LICENSE](/LICENSE) for details
