@@ -21,6 +21,9 @@ linkPrefix = "/react-mdc-web"
   name = "Elevation"
   path = "/components/elevation/"
 [[components]]
+  name = "Expansion Panel"
+  path = "/components/expansion_panel/"
+[[components]]
   name = "FAB"
   path = "/components/fab/"
 [[components]]
