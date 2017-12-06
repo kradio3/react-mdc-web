@@ -16,7 +16,8 @@ export default class ExpansionPanels extends React.Component {
     >
       <ul
           className={classnames(
-              'mdc-list'
+              'mdc-list',
+              this.props.className
           )}
           style={{
             padding: 0,
