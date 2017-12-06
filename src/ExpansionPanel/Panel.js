@@ -1,9 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import Icon from '../Icon/Icon';
 
 export default class Panel extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+    title: PropTypes.string,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +46,8 @@ export default class Panel extends React.Component {
     return <li
         key="li"
         className={classnames(
-            { 'mdc-list-item': !this.state.expanded }
+            { 'mdc-list-item': !this.state.expanded },
+            this.props.className
         )}
         style={expandedStyles}
     >
