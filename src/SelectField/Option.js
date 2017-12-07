@@ -1,9 +1,11 @@
 import React from 'react';
-import MenuItem from '../Menu/MenuItem';
 
 const Option = props =>
-  <MenuItem className="mdc-list-item" >
-    {props.text}
-  </MenuItem>;
+    <option
+        onClick={props.onClick}
+        value={props.value}
+    >
+      {props.children}
+    </option>;
 
 export default Option;

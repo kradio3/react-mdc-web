@@ -42,6 +42,9 @@ linkPrefix = "/react-mdc-web"
   name = "Menu"
   path = "/components/menu/"
 [[components]]
+  name = "Select Field"
+  path = "/components/select_field/"
+[[components]]
   name = "Radio"
   path = "/components/radio/"
 [[components]]
