@@ -3,7 +3,7 @@ import React from 'react';
 import classnames from 'classnames';
 import ScaledComponent from './ScaledComponent';
 
-const ROOT = 'mdc-simple-menu';
+const ROOT = 'mdc-menu';
 const ANIMATING = `${ROOT}--animating`;
 const OPEN = `${ROOT}--open`;
 const TOPLEFT = `${OPEN}-from-top-left`;
