@@ -10,7 +10,7 @@ const propTypes = {
 
 const MenuList = ({ children, ...otherProps }) =>
   <List
-    className="mdc-simple-menu__items"
+    className="mdc-menu__items"
     role="menu"
     {...otherProps}
   >
