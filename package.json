@@ -51,7 +51,8 @@
     "LICENSE.md",
     "README.md",
     "lib/",
-    "out/"
+    "out/",
+    "src/"
   ],
   "scripts": {
     "preversion": "npm test",
