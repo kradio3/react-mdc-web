@@ -4,6 +4,7 @@
   "description": "React web components for Material Design",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
+  "side-effects": false,
   "author": "kradio3",
   "license": "SEE LICENSE IN LICENSE.md",
   "repository": "kradio3/react-mdc-web",
