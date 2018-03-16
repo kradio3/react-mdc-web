@@ -16,12 +16,25 @@ const DelayedItems = WrappedComponent => class extends React.PureComponent {
     this.state = { children };
   }
 
-  componentWillReceiveProps({ applyDelays: nextApplyDelays }) {
+  componentWillReceiveProps({ applyDelays: nextApplyDelays, children: nextChildren }) {
     const { applyDelays, children } = this.props;
+    const isEqualChildren = () => {
+      if (children.length !== nextChildren.length) {
+        return false
+      }
+      let i = children.length;
+      if (i != nextChildren.length) return false;
+      while (i--) {
+        if (children[i] !== nextChildren[i]) return false;
+      }
+      return true;
+    }
     if (applyDelays !== nextApplyDelays) {
       this.setState({
         children: nextApplyDelays ? this.applyTransitionDelays() : children,
       });
+    } else if (!isEqualChildren()) {
+      this.setState({children: nextChildren})
     }
   }
 
