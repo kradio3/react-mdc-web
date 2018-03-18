@@ -25,7 +25,7 @@ const DelayedItems = WrappedComponent => class extends React.PureComponent {
       let i = children.length;
       if (i !== nextChildren.length) return false;
       while (i > 0) {
-        i = i - 1;
+        i -= 1;
         if (children[i] !== nextChildren[i]) return false;
       }
       return true;
