@@ -23,18 +23,19 @@ const DelayedItems = WrappedComponent => class extends React.PureComponent {
         return false;
       }
       let i = children.length;
-      if (i != nextChildren.length) return false;
-      while (i--) {
+      if (i !== nextChildren.length) return false;
+      while (i > 0) {
+        i = i - 1;
         if (children[i] !== nextChildren[i]) return false;
       }
       return true;
-    }
+    };
     if (applyDelays !== nextApplyDelays) {
       this.setState({
         children: nextApplyDelays ? this.applyTransitionDelays() : children,
       });
     } else if (!isEqualChildren()) {
-      this.setState({children: nextChildren});
+      this.setState({ children: nextChildren });
     }
   }
 
