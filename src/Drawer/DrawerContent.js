@@ -9,7 +9,7 @@ const propTypes = {
 };
 
 const DrawerContent = ({ className, children, temporary, ...otherProps }) => {
-  const childs = React.Children.map(children, child => React.cloneElement(child, { temporary }));
+  const childs = React.Children.map(children, child => React.cloneElement(child, { temporary: temporary.toString() }));
   return (
     <div
       className={classnames(
